@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(244, 241, 241);
+}
+#P_container{
+    text-align: center;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#P_box1>img{
+    border-radius: 20px 0 0 0;
+}
+#P_box2{
+    text-align: left;
+   margin-top: 20px;
+   width: 40%;
+   margin-bottom: 20px;
+}
+#P_form{
+    display: flex;
+    flex-direction: column;
+}
+.P_input{
+    width: 80%;
+    padding: 10px;
+    margin: 25px 0 15px 0;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    /* color: rgb(250, 247, 247); */
+}
+#P_signup{
+    margin-left: -10px;
+}
+#P_wapp{
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#P_varify_box{
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+}
+#P_verifyBtn{
+    width: 90%;
+    padding: 10px;
+    color: white;
+    background-color:
+    #008ecc;
+    border: none;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+#P_footer{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+   
+}
+#P_footer>p{
+    width: 20%;
+    margin: auto;
+    font-size: 12px;
+}
+#P_footer>p>a{
+    color: red;
+    font-size: 12px;
+    text-decoration: none;
+    margin: auto;
+}
+#eye12{
+    display: none;
+}
+#eye21{
+    display: none;
+}
+#eye1:hover{
+    cursor: pointer;
+}
+#eye2:hover{
+    cursor: pointer;
+}
+#eye12:hover{
+    cursor: pointer;
+}
+#eye21:hover{
+    cursor: pointer;
+}
+#P_send:hover{
+    cursor: pointer;
+}
+
