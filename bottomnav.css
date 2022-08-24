@@ -11,8 +11,9 @@
 color: gray;
 }
 .Adropdown{
+    width: 100%;
     margin: auto;
-
+    position: fixed;
     background-color: rgb(238, 237, 237);
   display: flex;
     text-align: center;
@@ -48,6 +49,10 @@ color: gray;
 .Ainner2{
     width: 200px;
     display: none;
+}
+.Adropdown>ul>li:hover  {
+   background-color: #94b4db;
+   padding: 0px 0px 5px 0px;
 }
 .Adropdown ul li:hover .Ainner{
     display: block;
