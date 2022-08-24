@@ -117,6 +117,82 @@ body{
     height: 40%;
    
 }
-body{
-    /* opacity: 0.5; */
+#P_number{
+    margin-top: 10px;
+    font-size: 12px;
+}
+#P_change{
+    color: red;
+    font-size: 12px;
+}
+#P_send{
+    color: red;  
+    float: right; 
+    font-size: 12px; 
+    margin-left: 68%; 
+    margin-top: -15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #P_container{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #P_container>img{
+        margin: auto;
+    }
+    #P_form{
+        padding: 20px;
+    }
+    .P_input{
+        width: 150%;
+    }
+    #P_signup{
+        margin-left:0px ;
+    }
+    #P_box2{
+        margin-left: 20px;
+    }
+    #eye1{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #eye12{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #eye2{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #eye21{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #P_wapp{
+        width: 170%;
+    }
+   #P_footer>p{
+    width: 50%;
+   }
+   #P_varify_box{
+    width: 160%;
+   display: flex;
+   justify-content: space-between;
+   }
+   #P_change{
+    margin-top: 10px;
+   }
+   #P_send{
+    width: 100%;
+    margin-left: 268px;
+   }
+
 }
