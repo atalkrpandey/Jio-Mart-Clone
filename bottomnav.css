@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#Adeliver{
+    width: 150px;
+    display: flex;
+}
+#Adeliver h3{
+color: gray;
+}
+.Adropdown{
+    margin: auto;
+
+    background-color: rgb(238, 237, 237);
+  display: flex;
+    text-align: center;
+    height: 40px;
+    padding-left: 3%;
+}
+.Adropdown ul{
+    display: inline-flex;
+}
+#Aloimg{
+    width: 20px;
+    height: 40px;
+    margin: 0px 10px 10px 10px;
+}
+.Adropdown ul li{
+    width: 120px;
+    margin: 10px 18px;
+    list-style: none;
+    cursor: pointer;
+}
+.Ainner{
+    display: flex;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(238, 237, 237);
+    display: none;
+   
+}
+.Ainner1{
+    width: 200px;
+    display: none;
+}
+.Ainner2{
+    width: 200px;
+    display: none;
+}
+.Adropdown ul li:hover .Ainner{
+    display: block;
+    width: 400px;
+    display: flex;
+}
+.Adropdown ul li:hover .Ainner1{
+    display: block;
+}
+.Ainner1 ul{
+  
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   background-color: rgb(238, 237, 237);
+}
+.Adropdown ul li:hover .Ainner2{
+    display: block;
+    position: relative;
+    /* left: 51px; */
+}
+.Ainner2 ul{
+ 
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   background-color: rgb(238, 237, 237);
+}
+.Ahr{
+    position: relative;
+    /* left: 50px; */
+}
+.Ainner2 ul li{
+    width: 90%;
+    padding: 5px 10px;
+    margin: 10px 20px;
+    text-align: left;
+}
+.Ainner1 ul li{
+    width: 90%;
+    padding: 5px 10px;
+   margin: 10px 20px;
+   text-align: left;
+}
+.Ainner2 ul li:hover{
+    background-color: rgb(255, 255, 255);
+    
+    color: #0e72ed;
+    cursor: pointer;
+   
+}
+.Ainner1 ul li:hover{
+    background-color: rgb(255, 255, 255);
+    color: #0e72ed;
+    cursor: pointer;
+}
