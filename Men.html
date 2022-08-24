@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEN</title>
+    <link rel="stylesheet" href="./men.css" />
+  </head>
+  <body>
+    <div id="D_navbar"></div>
+    <div id="D_navbar1"></div>
+    <div id="D_main">
+      <div id="D_container">
+        <img
+          src="https://www.jiomart.com/images/category/496/men-20200831.jpg"
+          alt=""
+        />
+      </div>
+
+      <div id="D_sort">
+        <h3>Sort by:</h3>
+        <div id="D_button">
+          <button>Popularity</button>
+          <button onclick="sortHl()">High to Low</button>
+          <button onclick="sortLh()">Low to High</button>
+          <button onclick="discount()">Discount</button>
+          <button onclick="alldata()">All Product</button>
+        </div>
+      </div>
+      <div id="x">
+        <div id="p">
+          <h3>Categories</h3>
+          <select name="" id="">
+            <option value="Men">Men</option>
+            <option value="">Clothing Accessories</option>
+            <option value="">Western Wear</option>
+            <option value="">Inner Wear</option>
+            <option value="">Bags,belts& Wallets</option>
+            <option value="">Ethnic Wear</option>
+            <option value="">Footwear</option>
+            <option value="">Fashion jewellery</option>
+            <option value="">Eyewear</option>
+          </select>
+          <br />
+          <select name="" id="">
+            <option value="Women">Women</option>
+            <option value="Men">Men</option>
+            <option value="">Clothing Accessories</option>
+            <option value="">Western Wear</option>
+            <option value="">Inner Wear</option>
+            <option value="">Bags,belts& Wallets</option>
+            <option value="">Ethnic Wear</option>
+            <option value="">Footwear</option>
+            <option value="">Fashion jewellery</option>
+            <option value="">Eyewear</option>
+          </select>
+          <br />
+          <select name="" id="">
+            <option value="Girl">Girls</option>
+            <option value="Men">Men</option>
+            <option value="">Clothing Accessories</option>
+            <option value="">Western Wear</option>
+            <option value="">Inner Wear</option>
+            <option value="">Bags,belts& Wallets</option>
+            <option value="">Ethnic Wear</option>
+            <option value="">Footwear</option>
+            <option value="">Fashion jewellery</option>
+            <option value="">Eyewear</option>
+          </select>
+          <br />
+          <select name="" id="">
+            <option value="Boy">Boy</option>
+            <option value="Men">Men</option>
+            <option value="">Clothing Accessories</option>
+            <option value="">Western Wear</option>
+            <option value="">Inner Wear</option>
+            <option value="">Bags,belts& Wallets</option>
+            <option value="">Ethnic Wear</option>
+            <option value="">Footwear</option>
+            <option value="">Fashion jewellery</option>
+            <option value="">Eyewear</option>
+          </select>
+          <br />
+          <select name="" id="">
+            <option value="Infants">Infants</option>
+            <option value="Men">Men</option>
+            <option value="">Clothing Accessories</option>
+            <option value="">Western Wear</option>
+            <option value="">Inner Wear</option>
+            <option value="">Bags,belts& Wallets</option>
+            <option value="">Ethnic Wear</option>
+            <option value="">Footwear</option>
+            <option value="">Fashion jewellery</option>
+            <option value="">Eyewear</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- // all product -->
+    <div id="D_allmain">
+      <div id="D_all">
+        <div id="items"></div>
+      </div>
+      <div id="f">
+        <h3>Filter</h3>
+        <form action="">
+          <h3>Availability</h3>
+          <input type="checkbox" /> Instock Products
+          <h3>Gender</h3>
+          <input type="checkbox" onclick="allproduct()" /> Men
+        </form>
+        <h3 id="D_bra">Categories</h3>
+        <input id="D_search" type="text" placeholder="search" />
+        <div id="D_scroll">
+          <form action="">
+            <input type="checkbox" /> Tshirts
+            <br />
+            <input type="checkbox" /> Shirts
+            <br />
+            <input type="checkbox" /> Shorts
+            <br />
+            <input type="checkbox" /> Wallets
+            <br />
+            <input type="checkbox" /> Jeans
+            <br />
+            <input type="checkbox" /> Trouser
+            <br />
+            <input type="checkbox" /> Casual shoes
+            <br />
+            <input type="checkbox" /> Track Paints
+          </form>
+        </div>
+        <h3 id="D_brand">Size</h3>
+        <div id="D_size">
+          <form action="">
+            <input type="checkbox" /> M
+            <br />
+            <input type="checkbox" /> L
+            <br />
+            <input type="checkbox" /> S
+            <br />
+            <input type="checkbox" /> XXl
+            <br />
+            <input type="checkbox" /> 40
+            <br />
+            <input type="checkbox" /> 34
+            <br />
+            <input type="checkbox" /> 32
+            <br />
+            <input type="checkbox" /> 36
+          </form>
+        </div>
+        <h3 id="D_brand">Brand</h3>
+        <input
+          type="text"
+          id="D_S"
+          oninput="debouncing(main,2000)"
+          placeholder="search"
+        />
+        <div id="D_size">
+          <form action="">
+            <input type="checkbox" onclick="netplay()" /> NETPLAY
+            <br />
+            <input type="checkbox" onclick="PERFORMAX()" /> PERFORMAX
+            <br />
+            <input type="checkbox" onclick="NETWORK()" /> NETWORK
+            <br />
+            <input type="checkbox" onclick="AADI()" /> AADI
+            <br />
+            <input type="checkbox" /> SMARTEES
+            <br />
+            <input type="checkbox" /> JUMP CUTS
+            <br />
+            <input type="checkbox" /> SHOPYHOLIK
+            <br />
+            <input type="checkbox" /> BASE 41
+            <br />
+            <input type="checkbox" /> LOREM
+            <br />
+            <input type="checkbox" /> ESPOIR
+            <br />
+            <input type="checkbox" /> SLIM SHINE"
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="D_footer"></div>
+  </body>
+</html>
+<script>
+  let getdata = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata "
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  getdata();
+  let append = async (data) => {
+    let item = document.getElementById("items");
+    item.innerHTML = null;
+    data.forEach(function (el) {
+      let box = document.createElement("div");
+      box.addEventListener("click", () => {
+        show(el);
+      });
+
+      let img = document.createElement("img");
+      img.src = el.image;
+      let desc = document.createElement("p");
+      desc.innerText = el.title;
+      let price = document.createElement("p");
+      price.innerText = `₹ ${el.pricenew}`;
+
+      let id = document.createElement("p");
+      id.innerText = el.id;
+
+      box.append(img, desc, price);
+      item.append(box);
+    });
+  };
+  let sortHl = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?_sort=pricenew&_order=desc "
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let sortLh = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?_sort=pricenew&_order=asc "
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let alldata = async () => {
+    console.log("in");
+    getdata();
+  };
+  let discount = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?_sort=dissection 2&_order=desc"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+
+  let show = (el) => {
+    localStorage.setItem("products", JSON.stringify(el));
+  };
+
+  async function brand() {
+    let query = document.getElementById("D_S").value;
+
+    console.log(query);
+    let url = `https://secure-waters-87632.herokuapp.com/api/mendata/?drugvarients=${query}`;
+    let res = await fetch(url);
+    let data = await res.json();
+    console.log(data);
+    return data;
+  }
+  async function main() {
+    let data = await brand();
+    console.log(data);
+    append(data);
+  }
+  let id;
+  function debouncing(func, delay) {
+    if (id) {
+      clearTimeout(id);
+    }
+    id = setTimeout(function () {
+      func();
+    }, delay);
+  }
+
+  let netplay = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?drugvarients=NETPLAY"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let PERFORMAX = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?drugvarients=PERFORMAX"
+    );
+    let data = await res.json();
+    console.log(data);
+    // window.location.reload();
+    append(data);
+  };
+  let AADI = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?drugvarients=AADI"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let NETWORK = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/mendata/?drugvarients=NETWORK"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+
+  // all product check box
+  let allproduct = async () => {
+    getdata();
+  };
+</script>
