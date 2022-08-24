@@ -38,7 +38,16 @@ if(document.getElementById("P_password2").type=="text"){
    
 document.getElementById("P_send").addEventListener("click",function(){
     otp=Math.floor((Math.random() * 1000000) + 1);
-        alert(otp);
+        // alert(otp);
+
+        document.querySelector("#loading").style.display="block";
+        document.querySelector("body").style.opacity="0.5";
+        setTimeout(()=>{
+            document.querySelector("#loading").style.display="none";
+            document.getElementById("P_OTP").value=otp;
+            document.querySelector("body").style.opacity="1";
+        },3000);
+
 });
 
 
