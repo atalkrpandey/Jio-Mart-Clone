@@ -30,7 +30,9 @@ color: gray;
 }
 .Adropdown ul li{
     width: 120px;
-    margin: 10px 18px;
+   height: 30px;
+    margin: 5px 18px;
+    padding: 5px 0px;
     list-style: none;
     cursor: pointer;
 }
@@ -50,9 +52,9 @@ color: gray;
     width: 200px;
     display: none;
 }
-.Adropdown>ul>li:hover  {
+.Adropdown>ul>li:hover{
    background-color: #94b4db;
-   padding: 0px 0px 5px 0px;
+   height: 30px;
 }
 .Adropdown ul li:hover .Ainner{
     display: block;
