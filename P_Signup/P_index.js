@@ -1,4 +1,7 @@
 
+let login=JSON.parse(localStorage.getItem("login"));
+document.getElementById("P_usersNumber").innerText=login.number;
+
 let otp;
 
 document.getElementById("eye1").addEventListener("click",showPassword1);
@@ -40,13 +43,25 @@ document.getElementById("P_send").addEventListener("click",function(){
     otp=Math.floor((Math.random() * 1000000) + 1);
         // alert(otp);
 
-        document.querySelector("#loading").style.display="block";
+        // document.querySelector("#loading").style.display="block";
         document.querySelector("body").style.opacity="0.5";
+        document.getElementById("otpFetchGif").style.display="block";
+
+        setTimeout(()=>{
+           document.getElementById("otpFetchGif").style.display="none";
+           document.querySelector("body").style.opacity="1";
+        },3000);
+
+        setTimeout(()=>{
+            document.querySelector("body").style.opacity="0.5";
+            document.querySelector("#loading").style.display="block";
+        },3200)
+
         setTimeout(()=>{
             document.querySelector("#loading").style.display="none";
             document.getElementById("P_OTP").value=otp;
             document.querySelector("body").style.opacity="1";
-        },3000);
+        },6000);
 
 });
 
@@ -73,7 +88,7 @@ function updateNumber(){
             email: document.getElementById("P_Email").value,
             password1: document.getElementById("P_password1").value,
             password2: document.getElementById("P_password2").value,
-
+            UserNumber:login.number,
         };
 
 
@@ -89,16 +104,42 @@ function updateNumber(){
 
         if (document.getElementById("P_firstName").value && document.getElementById("P_lastName").value && document.getElementById("P_Email").value && document.getElementById("P_password1").value && document.getElementById("P_password2").value==document.getElementById("P_password1").value && document.getElementById("P_OTP").value && document.getElementById("P_password1").value && pass) {
 
+            let arr = JSON.parse(localStorage.getItem("signup")) || [];
+            let existingUser=false;
+
+            if(arr.length){
+                for(let i=0; i<arr.length; i++){
+                    if(arr[i].email== document.getElementById("P_Email").value || arr[i].updateNumber==login.number){
+                      existingUser=true;
+                    }
+                }
+            }
+
+            if(existingUser){
+                alert("Already existing user!");
+                return ;
+            }
+
             if(document.getElementById("P_OTP").value !=otp){
                 alert("Please fill with correct OTP!");
             }else if(document.getElementById("P_password1").value.trim().length !=8){
                 alert("Please enter a password as per requirement!");
             }else{
-                let arr = JSON.parse(localStorage.getItem("signup")) || [];
+               
 
                 arr.push(data);
 
                 localStorage.setItem("signup", JSON.stringify(arr));
+                document.getElementById("signup_sucessful").play();
+                document.getElementById("popup").style.display="block";
+
+                setTimeout(()=>{
+                    document.getElementById("popup").style.display="none";
+                    },3000); 
+                
+                setTimeout(()=>{
+                   window.location.replace("../P_SignIn/P_index.html");
+                    },3500);     
 
 console.log(arr);
             }

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <audio src="./signup_successful.mp3" id="signup_sucessful"></audio>
     <div id="P_container">
         <div id="P_box1">
             <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
@@ -32,6 +33,7 @@
                         style="color: gray; margin-left: -29px;" id="eye1"></i>
                         <i class="fa-solid fa-eye-slash" style="color: gray; margin-left: -29px;" id="eye12"></i>
                 </div>
+              
                 <p id="P_pass" style="color:
                 rgba(0, 0, 0, 0.6); font-size: 11px;margin-top: -10px;">Use 8 or more characters with a mix of letters
                     & numbers</p>
@@ -48,10 +50,18 @@
                         information on Whatsapp</p>
                     <input type="checkbox" id="p_checkbox" style="margin-top: -5px ;">
                 </div>
+                  <!-- ----------------------POPUUP-------- -->
+                  <div id="popup">
+                    <img src="https://cdn.dribbble.com/users/11783/screenshots/3492735/animation.gif" alt="">
+                </div>
+                <div id="otpFetchGif" class="showFetch">
+                   Fetching OTP Please Wait for a While!
+                </div>
+                <!-- ----------------------POPUUP-------- -->
 <!-- -------------------------------Verify-------------------------- -->
                 <h2 style="margin-top: 40px;">Verify</h2>
                 <div id="P_varify_box">
-                    <p id="P_number"> We have sent 6 digit OTP on +91-1234567890 </p>
+                    <p id="P_number"> We have sent 6 digit OTP on +91-<span id="P_usersNumber"></span>  </p>
                     <p id="P_change">Change</p>
                 </div>
                 <input type="number" id="P_OTP" class="P_input" placeholder="Enter your OTP" required>
