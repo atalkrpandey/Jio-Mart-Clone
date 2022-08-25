@@ -206,3 +206,1017 @@ h1{
 
 /* *****************************END OF SHOP BY TOP CATEGORY****************************** */
 
+
+
+/* *************************************END OF IMAGE CAROUSEL ************************/
+
+
+
+/* **********************TOP DEALS */
+
+.Satyajit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: center;
+    border: 2px solid;
+    position: relative;
+    /* margin-top: 50px; */
+    border: none;
+}
+
+.Satyajit-horizontal-scroll {
+    width: 90%;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Satyajit-container .Satyajit-btn-scroll {
+    background-color: #fff;
+    color: #999;
+    position: absolute;
+    padding: 5px 8px;
+    border: 0;
+    margin: 0 5px;
+    z-index: 100;
+    cursor: pointer;
+    transition: 1s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4%;
+}
+
+.Satyajit-container #Satyajit-btn-scroll-right {
+    right: 0;
+}
+
+.Satyajit-container #Satyajit-btn-scroll-left {
+    left: 0;
+}
+
+.Satyajit-container .Satyajit-btn-scroll i {
+    font-size: 40px;
+}
+
+.Satyajit-storys-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    transition: 0.3s all ease-out;
+    /* border: 2px solid red; */
+
+
+}
+
+.Satyajit-story-circle {
+    width: 180px;
+    height: 330px;
+    margin: 2px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 8px;
+    border:  2px solid rgba(111,114,132,.25);
+    /* background-color: rgba(225, 227, 107, 0.54) !important; */
+    border-radius: 6px;
+}
+
+.Satyajit-story-circle img {
+    width: 90%;
+    margin-top: 10px;
+    height: 40%;
+    object-fit: contain;
+    transition: 0.1s all ease-in-out;
+    position: absolute;
+    top: 0;
+    border: none;
+    border-radius: 6px 6px  0 0;
+}
+.Satyajit-story-circle img:hover{
+    transform: scale(1.1);
+}
+
+.Satyajit-story-circle p {
+
+    z-index: 100;
+}
+.Satyajit-story-circle .off_logo_back{
+    z-index: 10;
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    left:0;
+    top: -2%;
+}
+.Satyajit-story-circle .offLogo {
+    position: absolute;
+    left: 3%;
+    top: -2%;
+    z-index: 100;
+    /* background-color: rgb(255, 7, 7); */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:#fff ;
+    font-weight:600 ;
+    font-size: 13px;
+    padding: 5px;
+
+
+}
+
+.Satyajit-story-circle .title {
+    position: absolute;
+    top: 43%;
+    width: 93%;
+    left: 5%;
+    height: 14%;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+}
+
+.Satyajit-story-circle .discounted_price {
+    position: absolute;
+    top: 58%;
+    height: 5%;
+    left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+}
+
+.Satyajit-story-circle .Satyajit-original-mrp {
+    position: absolute;
+    top: 67%;
+    height: 5%;
+    left: 5%;
+    color: rgb(83, 80, 80);
+    border: none;
+}
+.Satyajit-story-circle .Satyajit-original-mrp .Satyajit-price{
+    text-decoration: line-through;
+}
+
+.Satyajit-story-circle .Satyajit-save-mrp {
+    position: absolute;
+    top: 72%;
+    height: 5%;
+    left: 5%;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+}
+
+.Satyajit-story-circle .btn-grp {
+    position: absolute;
+    top: 86%;
+    background-color: #008ecc;
+    left: 5%;
+    width: 90%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.Satyajit-story-circle .btn-grp button {
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.Satyajit-story-circle .btn-grp button:last-child {
+    background-color: rgba(255, 255, 255, 0.109);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.Satyajit-story-circle .greenDot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+.Satyajit-story-circle .greenBox{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border: 1px solid green;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    z-index: 100;
+}
+
+
+/* *******************************************STARTING OF FINACE SECTION***************** */
+
+
+
+.Sat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: center;
+    border: 2px solid;
+    position: relative;
+    border: none;
+    margin-top: 2%;
+}
+
+.Sat-horizontal-scroll {
+    width: 90%;
+    height: 220px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.Sat-container .Sat-btn-scroll {
+    background-color: #fff;
+    color: #999;
+    position: absolute;
+    padding: 5px 8px;
+    border: 0;
+    margin: 0 5px;
+    z-index: 100;
+    cursor: pointer;
+    transition: 1s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4%;
+}
+
+.Sat-container #Sat-btn-scroll-right {
+    right: 0;
+}
+
+.Sat-container #Sat-btn-scroll-left {
+    left: 0;
+}
+
+.Sat-container .Sat-btn-scroll i {
+    font-size: 40px;
+}
+
+.Sat-storys-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    transition: 0.3s all ease-out;
+    /* border: 2px solid red; */
+    transition: 0.6s cubic-bezier(0.48,0.15,0.18,1);
+
+
+}
+
+.Sat-story-circle {
+    width: 550px;
+    height: 180px;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 8px;
+    border:  1px solid rgba(111,114,132,.25);
+    border-radius: 6px;
+  
+}
+
+.Sat-story-circle img {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    border: none;
+    border-radius: 6px 6px  6px 6px;
+
+}
+
+
+.Sat-story-circle p {
+
+    z-index: 100;
+}
+
+.Sat-story-circle .offLogo {
+    position: absolute;
+    left: 1%;
+    top: -5%;
+    background-color: rgb(255, 7, 7);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:#fff ;
+    font-weight:900 ;
+    font-size: 13px;
+    padding: 5px;
+
+
+}
+
+.Sat-story-circle .title {
+    position: absolute;
+    top: 43%;
+    width: 93%;
+    left: 5%;
+    height: 12%;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+}
+
+.Sat-story-circle .discounted_price {
+    position: absolute;
+    top: 58%;
+    height: 5%;
+    left: 5%;
+    font-size: 22px;
+    font-weight: 900;
+    border: none;
+}
+
+.Sat-story-circle .Sat-original-mrp {
+    position: absolute;
+    top: 67%;
+    height: 5%;
+    left: 5%;
+    color: rgb(83, 80, 80);
+    border: none;
+}
+.Sat-story-circle .Sat-original-mrp .Sat-price{
+    text-decoration: line-through;
+}
+
+.Sat-story-circle .Sat-save-mrp {
+    position: absolute;
+    top: 72%;
+    height: 5%;
+    left: 5%;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+}
+
+.Sat-story-circle .btn-grp {
+    position: absolute;
+    top: 86%;
+    background-color: #008ecc;
+    left: 5%;
+    width: 90%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.Sat-story-circle .btn-grp button {
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.Sat-story-circle .btn-grp button:last-child {
+    background-color: rgba(255, 255, 255, 0.109);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+
+/* ******************Offer On daily Essentials */
+
+#sa-essential-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 290px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 100px; */
+    gap: 20px;
+  
+}
+
+#sa-essential-container .sa-essentials-box {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #efd6da !important;
+}
+#sa-essential-container .sa-essentials-box:hover{
+    box-shadow: rgba(0, 0, 1, 0.50) 5px 5px 8px;
+}
+
+#sa-essential-container .sa-essentials-box:hover .sa-essentials-product {
+    transform: scale(1.1);
+}
+
+#sa-essential-container .sa-essentials-box .sa-essentials-top {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+#sa-essential-container .sa-essentials-box h3:first-child {
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0 0;
+    top: -9%;
+}
+
+#sa-essential-container .sa-essentials-box h3:first-child em {
+    font-size: 26px;
+}
+
+#sa-essential-container .sa-essentials-box .sa-essentials-product {
+    
+    margin-top: 20%;
+    height: 80%;
+    width: 100%;
+    line-height: 1px;
+    transition: 0.3s all ease-in-out;
+    justify-content: start;
+}
+
+#sa-essential-container .sa-essentials-box .sa-essentials-product img {
+    height: 70%;
+}
+
+
+
+/* //////////////////////////Starting of Shop by Category/ */
+
+        
+.Satyajit-2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: center;
+    border: 2px solid;
+    position: relative;
+    /* margin-top: 50px; */
+    border: none;
+}
+
+.Satyajit-2-horizontal-scroll {
+    width: 90%;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Satyajit-2-container .Satyajit-2-btn-scroll {
+    background-color: #fff;
+    color: #999;
+    position: absolute;
+    padding: 5px 8px;
+    border: 0;
+    margin: 0 5px;
+    z-index: 100;
+    cursor: pointer;
+    transition: 1s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4%;
+}
+
+.Satyajit-2-container #Satyajit-2-btn-scroll-right {
+    right: 0;
+}
+
+.Satyajit-2-container #Satyajit-2-btn-scroll-left {
+    left: 0;
+}
+
+.Satyajit-2-container .Satyajit-2-btn-scroll i {
+    font-size: 40px;
+}
+
+.Satyajit-2-storys-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    transition: 0.3s all ease-out;
+    /* border: 2px solid red; */
+
+
+}
+
+.Satyajit-2-story-circle {
+    width: 180px;
+    height: 220px;
+    margin: 2px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    border:  2px solid rgba(111,114,132,.25);
+    /* background-color: rgba(225, 227, 107, 0.54) !important; */
+    border-radius: 6px;
+}
+
+.Satyajit-2-story-circle img {
+    width: 85%;
+    margin-top: 10px;
+    height: 69%;
+    object-fit: cover;
+    transition: 0.1s all ease-in-out;
+    position: absolute;
+    top: 0;
+    border: none;
+    border-radius: 6px 6px  0 0;
+ 
+}
+.Satyajit-2-story-circle img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.Satyajit-2-story-circle .title {
+    position: absolute;
+    bottom: 2%;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+  
+}
+
+/* ////////////////////////START WOMEN FASHION ////////////////////// */
+
+
+#sa-banner-1-container{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2,619px);
+    grid-template-rows: repeat(424px);
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    /* transition: 1s all ease-in-out; */
+   }
+   #sa-banner-1-container .sa-banner-box:hover img, #sa-banner-2-container .sa-banner-box:hover img{
+       transform: scale(1.1);
+   }
+   #sa-banner-1-container .sa-banner-box img,#sa-banner-2-container .sa-banner-box img{
+      width: 100%;
+      height: 100%;
+      border-radius:14px ;
+      transition: 0.2s all ease-in-out;
+   }
+
+   #sa-banner-1-container .sa-banner-box,    #sa-banner-2-container .sa-banner-box{
+       border-radius:14px ;
+       overflow: hidden;
+       transition: 0.6s all ease-in-out;
+   
+   }
+   #sa-banner-2-container{
+       
+       display: grid;
+       grid-template-columns: repeat(5,239px);
+       grid-template-rows: repeat(1,300px);
+       width: 95%;
+       margin: auto;
+       margin-top: 3%;
+       justify-content: space-evenly;
+   }
+#sa-banner-3-container{
+width: 98%;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(2,646px);
+grid-template-rows: repeat(3,377px);
+justify-content: space-between;
+gap: 20px;
+margin-top: 3%;
+}
+#sa-banner-3-container .sa-banner-box img{
+width: 100%;
+height: 100%;
+}
+
+
+/* ////////////offers on household////////////////////// */
+
+
+#sa_2-essential-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 290px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 100px; */
+    gap: 20px;
+  
+}
+
+#sa_2-essential-container .sa_2-essentials-box {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #c5f8c0 !important;
+}
+#sa_2-essential-container .sa_2-essentials-box:hover{
+    box-shadow: rgba(0, 0, 1, 0.50) 5px 5px 8px;
+}
+
+#sa_2-essential-container .sa_2-essentials-box:hover .sa_2-essentials-product {
+    transform: scale(1.1);
+}
+
+#sa_2-essential-container .sa_2-essentials-box .sa_2-essentials-top {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+#sa_2-essential-container .sa_2-essentials-box h3:first-child {
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0 0;
+    top: -9%;
+}
+
+#sa_2-essential-container .sa_2-essentials-box h3:first-child em {
+    font-size: 26px;
+}
+
+#sa_2-essential-container .sa_2-essentials-box .sa_2-essentials-product {
+    
+    margin-top: 20%;
+    height: 80%;
+    width: 100%;
+    line-height: 1px;
+    transition: 0.3s all ease-in-out;
+    justify-content: start;
+}
+
+#sa_2-essential-container .sa_2-essentials-box .sa_2-essentials-product img {
+    height: 70%;
+}
+
+
+#sa-banner-4-container{
+    width: 98%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,646px);
+    grid-template-rows: repeat(2,377px);
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 3%;
+}
+#sa-banner-4-container .sa-banner-box img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ///////////////////// Offers On groceries////////////////////// */
+ 
+#sa_3-essential-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 290px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 100px; */
+    gap: 20px;
+  
+}
+
+#sa_3-essential-container .sa_3-essentials-box {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #bce1fe !important;
+}
+#sa_3-essential-container .sa_3-essentials-box:hover{
+    box-shadow: rgba(0, 0, 1, 0.50) 5px 5px 8px;
+}
+
+#sa_3-essential-container .sa_3-essentials-box:hover .sa_3-essentials-product {
+    transform: scale(1.1);
+}
+
+#sa_3-essential-container .sa_3-essentials-box .sa_3-essentials-top {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+#sa_3-essential-container .sa_3-essentials-box h3:first-child {
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0 0;
+    top: -9%;
+}
+
+#sa_3-essential-container .sa_3-essentials-box h3:first-child em {
+    font-size: 26px;
+}
+
+#sa_3-essential-container .sa_3-essentials-box .sa_3-essentials-product {
+    
+    margin-top: 20%;
+    height: 80%;
+    width: 100%;
+    line-height: 1px;
+    transition: 0.3s all ease-in-out;
+    justify-content: start;
+}
+
+#sa_3-essential-container .sa_3-essentials-box .sa_3-essentials-product img {
+    height: 70%;
+}
+
+
+/* ///////////////////// HOttest DEALS /////////////////////// */
+
+
+#sa-banner-5-container{
+    display: grid;
+    grid-template-columns:repeat(5,239px) ;
+    grid-template-rows:repeat(2,293px) ;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    gap: 10px; 
+}
+#sa-banner-5-container .sa-banner-box{
+    width:95%;
+    height:95%;
+    transition: 0.4s all ease-in-out;
+    /* border:1px solid grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: rgba(145, 141, 141, 0) 0px 6px 24px 0px, rgb(207, 204, 204) 0px 0px 0px 1px;
+
+ 
+}
+#sa-banner-5-container .sa-banner-box .sa-banner-inner{
+    width:90%;
+    height:90%;
+    border-radius: 4px 4px 0 0 ;
+}
+#sa-banner-5-container .sa-banner-box img{
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease-in-out;
+   
+}
+#sa-banner-5-container .sa-banner-box:hover img{
+    transform: scale(1.05);
+}
+
+
+/* /'//////////KIDS FASHION //////////////////////////' */
+
+#sa-banner-6-container{
+    display: grid;
+    grid-template-columns:repeat(5,239px) ;
+    grid-template-rows:repeat(1,293px) ;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    gap: 10px; 
+}
+#sa-banner-6-container .sa-banner-box{
+    width:95%;
+    height:95%;
+    transition: 0.4s all ease-in-out;
+    box-shadow: rgba(145, 141, 141, 0) 0px 6px 24px 0px, rgb(207, 204, 204) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+ 
+}
+#sa-banner-6-container .sa-banner-box .sa-banner-inner{
+    width:90%;
+    height:90%;
+   
+  
+}
+#sa-banner-6-container .sa-banner-box img{
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease-in-out;
+}
+#sa-banner-6-container .sa-banner-box:hover img{
+    transform: scale(1.05);
+}
+
+
+
+/* ////////////////////////BANNER /..//////////////////////// */
+
+#sa-banner-1-container{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2,619px);
+    grid-template-rows: repeat(424px);
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    /* transition: 1s all ease-in-out; */
+   }
+   #sa-banner-1-container .sa-banner-box:hover img, #sa-banner-2-container .sa-banner-box:hover img{
+       transform: scale(1.1);
+   }
+   #sa-banner-1-container .sa-banner-box img,#sa-banner-2-container .sa-banner-box img{
+      width: 100%;
+      height: 100%;
+      border-radius:14px ;
+      transition: 0.2s all ease-in-out;
+     
+   }
+
+   #sa-banner-1-container .sa-banner-box,    #sa-banner-2-container .sa-banner-box{
+       border-radius:14px ;
+       overflow: hidden;
+       transition: 0.6s all ease-in-out;
+   
+   }
+   #sa-banner-2-container{
+       
+       display: grid;
+       grid-template-columns: repeat(5,239px);
+       grid-template-rows: repeat(1,300px);
+       width: 95%;
+       margin: auto;
+       margin-top: 3%;
+       justify-content: space-evenly;
+   }
+#sa-banner-3-container{
+width: 98%;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(2,646px);
+grid-template-rows: repeat(2,377px);
+justify-content: space-between;
+gap: 20px;
+margin-top: 3%;
+}
+#sa-banner-3-container .sa-banner-box img{
+width: 100%;
+height: 100%;
+}
+
+
+
+
+
+/* //////////////////////////// FOOTER /////////////////////////// */
+
+
+#sa-footer-container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(21, 27, 57, .08);
+    margin-top: 3%;
+}
+
+#sa-footer-container .sa-footer-box {
+    width: 25%;
+    height: 90%;
+    line-height: 14px;
+    padding-left: 1%;
+}
+
+#sa-footer-container .sa-footer-box h5 {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+#sa-footer-container .sa-footer-box p {
+    color: grey;
+}
+
+#sa-footer-container .sa-footer-box #download {
+    margin: 0 20px;
+    text-align: center;
+}
+#sa-footer-container .sa-footer-box:nth-child(1), #sa-footer-container .sa-footer-box:nth-child(2){
+    line-height: 5px;
+}
+#sa-footer-container .sa-footer-box:last-child {
+    border-left: 1px solid rgba(128, 128, 128, 0.254);
+    margin-right: 1%;
+}
+
+#sa-footer-end {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    border-top: 1px solid rgba(128, 128, 128, 0.254);
+    background: rgba(21, 27, 57, .08);
+}
