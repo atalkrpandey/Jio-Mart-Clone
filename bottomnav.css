@@ -18,7 +18,7 @@ color: gray;
   display: flex;
     text-align: center;
     height: 40px;
-    padding-left: 3%;
+    padding-left: 2%;
 }
 .Adropdown ul{
     display: inline-flex;
@@ -29,8 +29,8 @@ color: gray;
     margin: 0px 10px 10px 10px;
 }
 .Adropdown ul li{
-    width: 120px;
-   height: 30px;
+    width: 130px;
+  
     margin: 5px 18px;
     padding: 5px 0px;
     list-style: none;
@@ -38,7 +38,7 @@ color: gray;
 }
 .Ainner{
     display: flex;
-    height: auto;
+    
     padding: 10px;
     background-color: rgb(238, 237, 237);
     display: none;
@@ -54,7 +54,7 @@ color: gray;
 }
 .Adropdown>ul>li:hover{
    background-color: #94b4db;
-   height: 30px;
+   
 }
 .Adropdown ul li:hover .Ainner{
     display: block;
