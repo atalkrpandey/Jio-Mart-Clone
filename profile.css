@@ -129,10 +129,65 @@
  }
  #Adropdown{
   position: relative;
- 
+  top: -550px;
+ left: 40%;
   display: none;
   border: 1px solid gray;
-  width: 300px;
-  height: 500px;
-
+   width: 400px;
+ background-color: #e5effc;
+ padding: 20px;
+ border-radius: 20px;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
  }
+ #Adropdown label{
+   display: block;
+   margin:10px  30px;
+   color: #0c7af7;
+ }
+ #Adropdown input{
+  display: block;
+  backdrop-filter:inherit;
+  margin:10px  20px;
+  margin: auto;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 25px;
+}
+#Adropdown h3{
+  text-align: center;
+  color: rgb(100, 97, 97);
+}
+#Adropdown #Adob{
+  width: 50%;
+  display: inline;
+  margin: 20px 20px 10px 20px;
+}
+#Aselect{
+  margin-left: 35px;
+  height: 25px;
+}
+#Asave{
+  display: block;
+  width: 80%;
+  color: #ffffff;
+  height: 35px;
+  background-color: #0c7af7;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#Aclose{
+  position: relative;
+  top: -45px;
+  left: 150px;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  color: red;
+  cursor: pointer;
+}
+

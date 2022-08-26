@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-   
+   <div>
     <h1 id="Aheading">My Account</h1>
     <div id="Amain">
         <div id="Aleft">
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div id="Adropdown"></div>
+  
     <div id="Aextra">
         <h4>My list</h4>
         <h4>Wishlist</h4>
@@ -56,29 +56,28 @@
         <h4>Contect us</h4>
         <h4><button id="Alogout"> Logout</button></h4>
     </div>
+</div>
+<div id="Adropdown">
+    <button id="Aclose">X</button>
+    <h3>EDIT PROFILE</h3>
+    <label for="">First Name</label>
+    <input type="text" name="" id="fname">
+    <label for="">Last Name</label>
+    <input type="text" name="" id="lastname">
+     <select name="" id="Aselect">
+        <option value="">Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+     </select>
+     <input type="date" name="" id="Adob" placeholder="Date of Birth">
+    <label for="">Email</label>
+    <input type="text" name="" id="Email">
+    <label for="">Mobile No</label>
+    <input type="text" name="" id="mbl">
+    <button id="Asave">Save Changes</button>
+</div>
 </body>
 </html>
-<script>
-    let detail=JSON.parse(localStorage.getItem("userdetail"));
-    if(detail!==null){                               
-    document.getElementById("Ausername").innerText=detail.username;
-    document.getElementById("Ausername1").innerText=detail.username;
-    document.getElementById("Auseremail").innerText=detail.Email;
-    document.getElementById("Amob1").innerText=detail.Mobile;
-    document.getElementById("Amob2").innerText=detail.Mobile;
-    document.getElementById("Aemail2").innerText=detail.Email;
-    }else{
-        window.location.href="login.html";
-    }
-    document.getElementById("Alogout").addEventListener("click",()=>{
-       
-        localStorage.setItem("userdetail",null);
-        window.location.href="index.html";
-    })
-    document.getElementById("Aedit").addEventListener("click",()=>{
-       
-    document.getElementById("Adropdown").style.display="block";
-    
-    document.getElementById("Adropdown").style.backgroundPosition="center"
-   })
+<script src="profile.js">
+   
 </script>  
