@@ -83,7 +83,7 @@ let append = () => {
 }
 
 append();
-let ProductsArr=[];
+let ProductsArr=JSON.parse(localStorage.getItem("products"))||[];
 document.getElementById("P_cart").addEventListener("click", function(){
     ProductsArr.push(products);
 localStorage.setItem("products", JSON.stringify(ProductsArr));
