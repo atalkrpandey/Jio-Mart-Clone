@@ -1,11 +1,11 @@
-let detail=JSON.parse(localStorage.getItem("userdetail"));
+let detail=JSON.parse(localStorage.getItem("signup"));
 if(detail!==null){                               
-document.getElementById("Ausername").innerText=detail.username;
-document.getElementById("Ausername1").innerText=detail.username;
-document.getElementById("Auseremail").innerText=detail.Email;
-document.getElementById("Amob1").innerText=detail.Mobile;
-document.getElementById("Amob2").innerText=detail.Mobile;
-document.getElementById("Aemail2").innerText=detail.Email;
+    document.getElementById("Ausername").innerText=detail.firstname+" "+detail.lastname;
+document.getElementById("Ausername1").innerText=detail.firstname+" "+detail.lastname;
+document.getElementById("Auseremail").innerText=detail.email;
+document.getElementById("Amob1").innerText=detail.UserNumber;
+document.getElementById("Amob2").innerText=detail.UserNumber;
+document.getElementById("Aemail2").innerText=detail.email;
 }else{
     window.location.href="login.html";
 }
@@ -34,20 +34,21 @@ document.getElementById("Aclose").addEventListener("click",()=>{
     let Email=document.getElementById('Email').value;
     let num=document.getElementById("mbl").value;
     let detail1={
-        username:firstname+" "+lastname,
+       firstname:firstname,
+       lastname:lastname,
         age:age,
         dob:dob,
-        Email:Email,
-        Mobile:num,
+        email:Email,
+        UserNumber:num,
     }
-    localStorage.setItem("userdetail",JSON.stringify(detail1));
-    let detail=JSON.parse(localStorage.getItem("userdetail"));
-    document.getElementById("Ausername").innerText=detail.username;
-document.getElementById("Ausername1").innerText=detail.username;
-document.getElementById("Auseremail").innerText=detail.Email;
-document.getElementById("Amob1").innerText=detail.Mobile;
-document.getElementById("Amob2").innerText=detail.Mobile;
-document.getElementById("Aemail2").innerText=detail.Email;
+    localStorage.setItem("signup",JSON.stringify(detail1));
+    let detail=JSON.parse(localStorage.getItem("signup"));
+    document.getElementById("Ausername").innerText=detail.firstname+" "+detail.lastname;
+document.getElementById("Ausername1").innerText=detail.firstname+" "+detail.lastname;
+document.getElementById("Auseremail").innerText=detail.email;
+document.getElementById("Amob1").innerText=detail.UserNumber;
+document.getElementById("Amob2").innerText=detail.UserNumber;
+document.getElementById("Aemail2").innerText=detail.email;
 alert("Your Profile updated")
 document.getElementById("Adropdown").style.display="none";
   })
