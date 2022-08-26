@@ -2,36 +2,42 @@
 // let navbar = document.querySelector("#navigation");
 // navbar.innerHTML = navigation();
   console.log('heloooo')
+   
+  let ProductData = JSON.parse(localStorage.getItem('DATA'))
 
-  let appendData = (data) => {
+
+//   let appendData = (ProductData) => {
  
-     console.log(data)
-    // document.getElementById("Asearchdiv").append(close);
-    let container = document.querySelector('#Asearchdiv');
-    container.innerHTML = null
-     data.forEach(({title,pricenew,image,priceold}) => {
-         let div1=document.createElement("div");
+//     //  console.log(data)
+//     // document.getElementById("Asearchdiv").append(close);
+    
+ 
+
+//      let container = document.querySelector('#Asearchdiv');
+//      container.innerHTML = null
+//      ProductData.forEach(({title,pricenew,image,priceold}) => {
+//          let div1=document.createElement("div");
         
-         let h3=document.createElement("h3");
-         h3.innerText=title
-         let p=document.createElement("p");
-         p.innerText=`Price:- ${pricenew}`;
-         p.style.marginTop="30px"
-         div1.append(h3,p)
-         let img=document.createElement('img');
-         img.src=image;
-         let div=document.createElement('div');
-         div.classList.add("AappendName")
-         div.append(div1,img);
-         div.addEventListener("click",()=>{
-           localStorage.setItem("product",JSON.stringify({title,pricenew,image,priceold}))
-         })
-       console.log(div)
-       container.append(div) 
-     });
-     document.getElementById("Asearchdiv").style.visibility="visible";
-     document.getElementById("Asearchdiv").style.display="block";
-   }
+//          let h3=document.createElement("h3");
+//          h3.innerText=title
+//          let p=document.createElement("p");
+//          p.innerText=`Price:- ${pricenew}`;
+//          p.style.marginTop="30px"
+//          div1.append(h3,p)
+//          let img=document.createElement('img');
+//          img.src=image;
+//          let div=document.createElement('div');
+//          div.classList.add("AappendName")
+//          div.append(div1,img);
+//          div.addEventListener("click",()=>{
+//            localStorage.setItem("product",JSON.stringify({title,pricenew,image,priceold}))
+//          })
+//        console.log(div)
+//        container.append(div) 
+//      });
+//      document.getElementById("Asearchdiv").style.visibility="visible";
+//      document.getElementById("Asearchdiv").style.display="block";
+//    }
  
 
 
@@ -60,9 +66,11 @@ document.getElementById("Alogodiv").addEventListener("click",()=>{
     if(event.key=="Enter"){
        let query=document.getElementById("Asearch").value;
        let res= await fetch(`https://secure-waters-87632.herokuapp.com/api/${query}`);
-       let data=await res.json();
-       console.log(data)
-      
+       let data2=await res.json();
+       console.log(data2);
+
+       localStorage.setItem('DATA',JSON.stringify(data2))
+       window.location.href = "./search.html"
     //    document.getElementById("Asearchbar").innerHTML="X";
     //    document.getElementById("Asearchbar").addEventListener("click",()=>{
     //     document.getElementById("Asearchdiv").style.visibility="hidden";
@@ -74,7 +82,7 @@ document.getElementById("Alogodiv").addEventListener("click",()=>{
     //     document.getElementById("Asearchbar").append(img);
         
     //    })
-    appendData(data);
+    // appendData(data);
     }
    
   }
@@ -95,3 +103,8 @@ function cartItemCount(){
     
 }
  
+let listLogo = document.querySelector("#Asearchlogo");
+
+listLogo.addEventListener('click',() => {
+    document.getElementById("Asearchdiv").style.visibility="hidden";
+})
