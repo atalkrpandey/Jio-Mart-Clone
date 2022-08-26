@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
 }
 #div11{
     margin: auto;
@@ -73,4 +73,28 @@
 }
 #P_check:hover{
     cursor: pointer;
+}
+#returnPolicy{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#productRating{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#solid1{
+    display: none;
+}
+#solid2{
+    display: none;
+}
+#solid3{
+    display: none;
+}
+#solid4{
+    display: none;
+}
+#solid5{
+    display: none;
+}
+#review{
+    display: none;
 }
