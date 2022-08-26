@@ -499,7 +499,7 @@ renderProduct()
         let box = document.createElement('div');
         box.setAttribute('class','greenBox')  ;
         box.append(dot)  
-        console.log(off_logo_back)
+    
         div.append(off_logo,off_logo_back,box,image,title,discounted_mrp,original_mrp,save_mrp,btn_group);
         imageContainer.append(div)
    
@@ -509,9 +509,17 @@ renderProduct()
   function storeItem(el){
     data.push(el);
     localStorage.setItem('products',JSON.stringify(data))
-  
+    cartItemCount()
   }
 
+function cartItemCount(){
+    
+    let cartPlace = document.querySelector('#Aitemcount');
+    let cartItem = JSON.parse(localStorage.getItem('products'));
+    cartPlace.innerHTML = null
+    cartPlace.innerHTML = cartItem.length
+    
+}
 
   /////////////Sating Of Shop By Category/.?//////////////////////////////
 

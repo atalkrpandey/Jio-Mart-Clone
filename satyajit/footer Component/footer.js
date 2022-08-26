@@ -1,7 +1,7 @@
 function footer (){
     return `
     <div id="sa-footer-container">
-    <div class="sa-footer-box">
+    <div class="sa-footer-box" style="line-height:20px">
         <h5>MOST POPULAR CATEGORIES</h5>
         <p>Staples</p>
         <p>Beverages</p>
@@ -12,7 +12,7 @@ function footer (){
         <p>Snacks & Branded Foods</p>
         <p>Dairy & Bakery</p>
     </div>
-    <div class="sa-footer-box">
+    <div class="sa-footer-box"  style="line-height:20px">
         <h5>CUSTOMER SERVICES</h5>
         <p>About Us</p>
         <p>FAQ</p>

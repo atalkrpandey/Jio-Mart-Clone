@@ -324,7 +324,7 @@ h1{
 .Satyajit-story-circle .offLogo {
     position: absolute;
     left: 3%;
-    top: -2%;
+    top: 3%;
     z-index: 100;
     /* background-color: rgb(255, 7, 7); */
     width: 30px;
@@ -1183,12 +1183,13 @@ height: 100%;
     align-items: center;
     background: rgba(21, 27, 57, .08);
     margin-top: 3%;
+    
 }
 
 #sa-footer-container .sa-footer-box {
     width: 25%;
     height: 90%;
-    line-height: 14px;
+    line-height: 30px;
     padding-left: 1%;
 }
 
