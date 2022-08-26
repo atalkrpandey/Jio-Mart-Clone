@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEN</title>
+    <title> Men-jioMart</title>
+    <link
+    rel="shortcut icon"
+    href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+    type="image/x-icon"
+  />
     <link rel="stylesheet" href="./men.css" />
   </head>
   <body>
@@ -104,7 +109,7 @@
         <div id="items"></div>
       </div>
       <div id="f">
-        <h3>Filter</h3>
+        <h3>Filters</h3>
         <form action="">
           <h3>Availability</h3>
           <input type="checkbox" /> Instock Products
@@ -112,16 +117,16 @@
           <input type="checkbox" onclick="allproduct()" /> Men
         </form>
         <h3 id="D_bra">Categories</h3>
-        <input id="D_search" type="text" placeholder="search" />
+        <input id="D_search" type="text" oninput="bouncing(category,1000)" placeholder="search" />
         <div id="D_scroll">
           <form action="">
-            <input type="checkbox" /> Tshirts
+            <input type="checkbox" onclick="tshirt()" /> Tshirts
             <br />
             <input type="checkbox" /> Shirts
             <br />
             <input type="checkbox" /> Shorts
             <br />
-            <input type="checkbox" /> Wallets
+            <input type="checkbox" onclick="wallet()"/> Wallets
             <br />
             <input type="checkbox" /> Jeans
             <br />
@@ -213,13 +218,17 @@
       img.src = el.image;
       let desc = document.createElement("p");
       desc.innerText = el.title;
+      // for align
       let price = document.createElement("p");
-      price.innerText = `₹ ${el.pricenew}`;
+      price.innerText = `₹ ${el.pricenew}.00`;
+      let pricenew=document.createElement("div");
+      pricenew.append(price)
+      
 
       let id = document.createElement("p");
       id.innerText = el.id;
 
-      box.append(img, desc, price);
+      box.append(img, desc, pricenew);
       item.append(box);
     });
   };
@@ -253,7 +262,7 @@
   };
 
   let show = (el) => {
-    localStorage.setItem("products", JSON.stringify(el));
+    localStorage.setItem("product", JSON.stringify(el));
   };
 
   async function brand() {
@@ -319,4 +328,50 @@
   let allproduct = async () => {
     getdata();
   };
+
+  let tshirt=async()=>{
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/tshirt"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let wallet=async()=>{
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/wallet"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  }
+
+
+
+
+
+  async function brand1() {
+    let query = document.getElementById("D_search").value;
+
+    console.log(query);
+    let url = `https://secure-waters-87632.herokuapp.com/api/${query}`;
+    let res = await fetch(url);
+    let data = await res.json();
+    console.log(data);
+    return data;
+  }
+  async function category() {
+    let data = await brand1();
+    console.log(data);
+    append(data);
+  }
+  let id1;
+  function bouncing(func, delay) {
+    if (id1) {
+      clearTimeout(id1);
+    }
+    id = setTimeout(function () {
+      func();
+    }, delay);
+  }
 </script>

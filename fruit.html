@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Fruits-jioMart</title>
+    <link
+    rel="shortcut icon"
+    href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+    type="image/x-icon"
+  />
+    <link rel="stylesheet" href="./fruit.css" />
+  </head>
+  <body>
+    <div id="D_navbar"></div>
+    <div id="D_navbar1"></div>
+    <div id="D_main">
+      <div id="D_container">
+        <img
+          src="https://www.jiomart.com/images/category/219/fruits-vegetables-20220519.jpeg"
+          alt=""
+        />
+      </div>
+
+      <div id="D_sort">
+        <h3>Sort by:</h3>
+        <div id="D_button">
+          <button>Popularity</button>
+          <button onclick="sortHl()">High to Low</button>
+          <button onclick="sortLh()">Low to High</button>
+          <button onclick="discount()">Discount</button>
+          <button onclick="alldata()">All Product</button>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- // all product -->
+    <div id="D_allmain">
+      <div id="D_all">
+        <div id="items"></div>
+      </div>
+      <div id="f">
+        <h3>Filters</h3>
+        <form action="">
+          <h3>Availability</h3>
+          <input type="checkbox" /> Instock Products
+         
+          
+        </form>
+        <h3 id="D_bra">Categories</h3>
+        <input id="D_search" type="text" oninput="bouncing(category,1000)" placeholder="search" />
+        <div id="D_scroll">
+          <form action="">
+            <input type="checkbox" onclick="APPLES()" /> Apples
+            <br />
+            <input type="checkbox" /> Gourds
+            <br />
+            <input type="checkbox" /> leafy Vegetables
+            <br />
+            <input type="checkbox" onclick="pears()"/> Pears
+            <br />
+            <input type="checkbox" /> Cucumber
+            <br />
+            <input type="checkbox" /> Pototo
+            <br />
+            <input type="checkbox" /> Beans
+            <br />
+            <input type="checkbox" /> Sporouts
+          </form>
+        </div>
+        
+        
+        <h3 id="D_brand">Brand</h3>
+        <input
+          type="text"
+          id="D_S"
+          oninput="debouncing(main,2000)"
+          placeholder="search"
+        />
+        <div id="D_size">
+          <form action="">
+            <input type="checkbox" onclick=" Label()" /> PRIVATE LABEL
+            <br />
+            <input type="checkbox" onclick="Reliance()" /> Reliance
+            <br />
+            <input type="checkbox" onclick="BOYO()" /> BOYO
+            <br />
+            <input type="checkbox" onclick="Zespri()" /> Zespri
+            <br />
+            <input type="checkbox" /> Premium Fruits
+            <br />
+           
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="D_footer"></div>
+  </body>
+</html>
+<script>
+  let getdata = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg "
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  getdata();
+  let append = async (data) => {
+    let item = document.getElementById("items");
+    item.innerHTML = null;
+    data.forEach(function (el) {
+      let box = document.createElement("div");
+    
+
+      let img = document.createElement("img");
+      img.src = el.image;
+      let desc = document.createElement("p");
+      desc.innerText = el.title;
+      // for align
+      let price = document.createElement("p");
+      price.innerText = `M.R.P:₹ ${el.pricenew}.00`;
+      let btn=document.createElement("button")
+      btn.innerText="Add to Cart"
+      btn.addEventListener("click", () => {
+        show(el);
+      });
+      let pricenew=document.createElement("div");
+      pricenew.append(price,btn)
+      
+
+      let id = document.createElement("p");
+      id.innerText = el.id;
+
+      box.append(img, desc, pricenew);
+      item.append(box);
+    });
+  };
+  let sortHl = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?_sort=pricenew&_order=desc "
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let sortLh = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?_sort=pricenew&_order=asc "
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let alldata = async () => {
+    console.log("in");
+    getdata();
+  };
+  let discount = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?_sort=dissection 2&_order=desc"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+
+  let show = (el) => {
+    localStorage.setItem("products", JSON.stringify(el));
+  };
+
+  async function brand() {
+    let query = document.getElementById("D_S").value;
+
+    console.log(query);
+    let url = `https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?drugvarients=${query}`;
+    let res = await fetch(url);
+    let data = await res.json();
+    console.log(data);
+    return data;
+  }
+  async function main() {
+    let data = await brand();
+    console.log(data);
+    append(data);
+  }
+  let id;
+  function debouncing(func, delay) {
+    if (id) {
+      clearTimeout(id);
+    }
+    id = setTimeout(function () {
+      func();
+    }, delay);
+  }
+
+  let Label = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?drugvarients=PRIVATE LABEL"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let Reliance = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?drugvarients=Reliance"
+    );
+    let data = await res.json();
+    console.log(data);
+    // window.location.reload();
+    append(data);
+  };
+  let BOYO = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?drugvarients=BOYO"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let Zespri = async () => {
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/FruitandVeg/?drugvarients=NETWORK"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+
+  // all product check box
+  let allproduct = async () => {
+    getdata();
+  };
+
+  let APPLES=async()=>{
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/app"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  };
+  let pears=async()=>{
+    let res = await fetch(
+      "https://secure-waters-87632.herokuapp.com/api/pear"
+    );
+    let data = await res.json();
+    console.log(data);
+    append(data);
+  }
+
+
+
+
+
+  async function brand1() {
+    let query = document.getElementById("D_search").value;
+
+    console.log(query);
+    let url = `https://secure-waters-87632.herokuapp.com/api/${query}`;
+    let res = await fetch(url);
+    let data = await res.json();
+    console.log(data);
+    return data;
+  }
+  async function category() {
+    let data = await brand1();
+    console.log(data);
+    append(data);
+  }
+  let id1;
+  function bouncing(func, delay) {
+    if (id1) {
+      clearTimeout(id1);
+    }
+    id = setTimeout(function () {
+      func();
+    }, delay);
+  }
+</script>
