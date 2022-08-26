@@ -83,13 +83,16 @@ let append = () => {
 }
 
 append();
+let ProductsArr=[];
 document.getElementById("P_cart").addEventListener("click", function(){
-localStorage.setItem("products", JSON.stringify(products));
+    ProductsArr.push(products);
+localStorage.setItem("products", JSON.stringify(ProductsArr));
 // window.location.replace("#")
 });
 
 document.getElementById("P_buyNow").addEventListener("click", function(){
-localStorage.setItem("products", JSON.stringify(products));
+    ProductsArr.push(products);
+localStorage.setItem("products", JSON.stringify(ProductsArr));
 // window.location.replace("#")
 })
 
