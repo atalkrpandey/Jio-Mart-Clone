@@ -13,10 +13,10 @@ function navigation(){
       </menu>
   </div>
   <div>
-      <a href=""><img  style="width: 50%;" id="Aweblogo" src="https://www.jiomart.com/assets/version1659733069/smartweb/images/jiomart_logo_beta.svg" alt=""></a>
+      <a href="./index.html"><img  style="width: 50%;" id="Aweblogo" src="https://www.jiomart.com/assets/version1659733069/smartweb/images/jiomart_logo_beta.svg" alt=""></a>
   </div>
   <div> 
-      <input style="height:40px;border: none; outline: none;width: 376%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
+      <input style="height:40px;border: none; outline: none;width: 365%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
 
       <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 22%;left: 71%;">
        

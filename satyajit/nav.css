@@ -136,24 +136,7 @@
         font-weight:lighter;
 
     }
-    #Asearchdiv{
-        position:absolute;
-        width: 500px;
-        top: 60px;
-        height: 500px;
-        left: 30%;
-        border: 1px solid gray;
-        visibility: hidden;
-        overflow: scroll;
-        background-color:#a3ddf8;
-       
-    }
-    .AappendName{
-        display: flex;
-        border: 1px solid gray;
-        padding: 20px;
-        cursor: pointer;
-    }
+   
     #Aclose{
         position:absolute;
         padding: 10px;

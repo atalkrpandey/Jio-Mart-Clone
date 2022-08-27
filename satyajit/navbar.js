@@ -1,44 +1,10 @@
-// import navigation from "./navbar component/navigationBar.js"
-// let navbar = document.querySelector("#navigation");
-// navbar.innerHTML = navigation();
-  console.log('heloooo')
+
+  
    
   let ProductData = JSON.parse(localStorage.getItem('DATA'))
 
 
-//   let appendData = (ProductData) => {
- 
-//     //  console.log(data)
-//     // document.getElementById("Asearchdiv").append(close);
-    
- 
 
-//      let container = document.querySelector('#Asearchdiv');
-//      container.innerHTML = null
-//      ProductData.forEach(({title,pricenew,image,priceold}) => {
-//          let div1=document.createElement("div");
-        
-//          let h3=document.createElement("h3");
-//          h3.innerText=title
-//          let p=document.createElement("p");
-//          p.innerText=`Price:- ${pricenew}`;
-//          p.style.marginTop="30px"
-//          div1.append(h3,p)
-//          let img=document.createElement('img');
-//          img.src=image;
-//          let div=document.createElement('div');
-//          div.classList.add("AappendName")
-//          div.append(div1,img);
-//          div.addEventListener("click",()=>{
-//            localStorage.setItem("product",JSON.stringify({title,pricenew,image,priceold}))
-//          })
-//        console.log(div)
-//        container.append(div) 
-//      });
-//      document.getElementById("Asearchdiv").style.visibility="visible";
-//      document.getElementById("Asearchdiv").style.display="block";
-//    }
- 
 
 
 document.getElementById("Alogodiv").addEventListener("click",()=>{
