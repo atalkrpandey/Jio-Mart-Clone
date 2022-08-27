@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addresspage</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- <link rel="icon" href="https://www.jiomart.com/assets/smartweb/favicon.svg" type="image/x-icon"> -->
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        /* font-family: system-ui; */
+        /* background: #f6f6f7; */
+      }
+      #ka_navbar {
+        width: 100%;
+        height: 55px;
+        /* border: 1px solid red; */
+        background-color: #008ecc;
+      }
+      #ka_title {
+        padding-left: 120px;
+        color: #fff;
+        font-size: 2rem;
+      }
+      #ka_beta {
+        color: #fff;
+        padding-left: 200px;
+      }
+      #ka_order {
+        margin: auto;
+        /* margin-top: %; */
+        /* border: 1px solid red; */
+        width: 90%;
+        height: 1250px;
+      }
+      #ka_ordersummart {
+        /* border: 1px solid black; */
+        height: 6%;
+        width: 95%;
+        margin: auto;
+        margin-top: 2%;
+
+        display: flex;
+        /* border-radius: 10%; */
+      }
+      #ka_ordersummart > h3 {
+        font-size: 1.5rem;
+        padding-left: 20px;
+        padding-top: 10px;
+      }
+      /* #ka_cart_image {
+        width: 30px;
+      }
+      #ka_cart_image3 {
+        width: 40px;
+        padding-top: 7px;
+        /* background-color: transparent; */
+      /* } */
+      #ka_cart_image1 {
+        width: 30px;
+        /* background-color: transparent; */
+        padding-top: 2%;
+      }
+      #ka_cart_image2 {
+        width: 30px;
+        padding-top: 1%;
+        /* background-color: transparent; */
+      } */
+      /* #ka_threelogo {
+        display: flex;
+        padding-left: 50%;
+        /* padding-top: 5px; */
+        /* gap: 20px; */
+      /* } */ */
+      .ka_logos {
+        text-decoration: none;
+        color: black;
+      }
+      #ka_Delivey_Address {
+        /* border: 1px solid green; */
+        width: 58%;
+        height: 650px;
+        margin-left: 2.5%;
+      }
+      .ka_box {
+        color: #212529;
+        /* background-color: #d5d5fd; */
+              background-color: rgb(241, 239, 239);
+        width: 60%;
+        height: 200px;
+        margin-left: 7%;
+        margin-top: 3%;
+        padding-left: 9%;
+        padding-top: 3%;
+      }
+      /* #ka_Basket_div { */
+        /* border: 5px solid teal; */
+        /* width: 100%;
+        height: 200px;
+        margin-top: 20%;
+        background-color: #fff;
+      } */
+      #ka_Payment {
+        /* border: 1px solid pink; */
+        width: 38%;
+  /* margin-top: 2%; */
+  margin-left: -2%
+      }
+      #ka_Payment>h2{
+        margin-top: 4%;
+        margin-left: 4%;
+      }
+      #ka_below_order {
+        display: flex;
+        height: 400px;
+        gap: 22px;
+      
+      }
+      #Adress_details {
+        position: absolute;
+    
+
+        display: none;
+        width: 23%;
+        height: 750px;
+        background-color: #f6f6f7;
+        /* border: 1px solid yellow; */
+
+        left: 77%;
+        text-align: center;
+      }
+      #ka_input {
+        margin-top: 20px;
+        width: 100%;
+        height: 30px;
+        background-color: #f6f6f7;
+        border-radius: 2%;
+        
+      }
+      .input_feild {
+        margin-top: 20px;
+        width: 90%;
+        height: 30px;
+        padding-left: 10px;
+        /* border-bottom: none; */
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        background-color: #f6f6f7;
+              /* background-color: rgb(241, 239, 239); */
+              /* border:1px solid red; */
+
+      }
+      #deliver_details_ka{
+        background-color: #008ecc;
+        width:70%;
+        height: 70px;
+        color: black;
+        margin: auto;
+        padding: 5px;
+
+      }
+      .btn_box {
+        background-color: red;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        width: 20%;
+        height: 12%;
+      }
+      #ka_address_box {
+        margin-left: 70%;
+        margin-top: 2%;
+        width: 22%;
+        height: 6%;
+        /* border: none; */
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 10px;
+        /* background-color: #008ecc; */
+        background-color: rgb(16, 16, 219);
+          /* margin-left: 70%;
+          margin-bottom: 20%;
+          padding:10px 20px 10px 20px; */
+          cursor: pointer;
+          color: white;
+          border: 1px solid blue;
+          border:1px solid blue
+
+  
+      }
+      #ka_payment_button{
+        margin-left: 70%;
+        margin-top: 2%;
+        width: 16%;
+        height: 4%;
+        /* border: none; */
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 10px;
+        /* background-color: #008ecc; */
+        background-color: rgb(16, 16, 219);
+          /* margin-left: 70%;
+          margin-bottom: 20%;
+          padding:10px 20px 10px 20px; */
+          cursor: pointer;
+          color: white;
+          border: 1px solid blue;
+          border:1px solid blue
+
+      }
+      #ka_basket {
+        display: flex;
+        gap: 65%;
+        background-color: #fff;
+      }
+      #ka_cost {
+        margin-left: 90%;
+      }
+      #ka_itemsfromCart {
+        margin: auto;
+        margin-top: 1%;
+        margin-left: -3%;
+        background-color: rgb(241, 239, 239);
+         width:100%;
+         /* border:1px solid teal; */
+         height: 120px;
+         border-radius: 3%;
+       
+      }
+      .ka_itemImage{
+        width:80%;
+        height: 80px;
+        margin-left:15%;
+        margin-top: 12%;
+      }
+      #ka_itemDetails {
+         margin: auto;
+        margin-top: 5%;
+      
+        font-size: 1.2rem;
+      
+      }
+      #ka_itemDetails_price{
+        display: flex;
+        gap: 20px;
+        margin-top: 2%;
+      }
+    
+      #ka_prize {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #ka_add_color {
+        background-color:#008ecc
+      }
+      #ka_deliver_details{
+        /* border:1px solid orangered
+         */
+         background-color: #fff;
+         height: 250px;
+         padding-top: 1%;
+         border-radius: 4%;
+      }
+      #ka_delivery_ka{
+        color:black;
+        margin-top: 1%;
+        /* border:1px solid red */
+      }
+      #background_ka{
+        
+        background-color: #f6f6f7;
+        /* background-color: red; */
+      }
+    
+      .fa-cart-minus {
+        /* border:1px solid red; */
+        width:100%
+      }
+      .iteam_box{
+        display: flex;
+        margin: auto;
+        /* border:1px solid red; */
+     
+      }
+      #ka_pa_threelogo {
+        display: flex;
+        padding-left: 48%;
+        padding-top: 4%;
+         /* border:1px solid red; */
+        /* padding-top: 5px; */
+        gap: 30px;
+      }
+      .ka_pa_logos {
+        text-decoration: none;
+        color: blue;
+      }
+      .removebtn{
+        display: flex;
+        justify-content: space-between;
+        
+        /* border:1px solid red */
+      }
+      .ka_bag{
+  border-radius: 1%;
+  margin: auto;
+  margin-top: 7%;
+ 
+  margin-left: 2%;
+  width:95%;
+      height: 53%;
+  background-color: rgb(241, 239, 239);
+  border-radius: 3%;
+
+  padding-left:20px ;
+}
+.ka_pay_details{
+    padding-top: 6%;
+    padding-left: 3%;
+   
+
+  }
+  .greensave{
+    margin-left: 60%;
+  }
+    </style>
+  </head>
+  <body>
+    <div id="Adress_details">
+      <div id="ka_add_color">
+        <h2>Add Address</h2>
+        <h2> Details</h2>
+        
+        <!-- <a href="#" class="close- closex" id="close">CLOSE</a> -->
+        <i  id="close" class="fa-solid fa-xmark"></i>
+      </div>
+    
+      <div id="ka_input">
+        <input
+          type="text"
+          class="input_feild"
+          id="pincode"
+          placeholder="pin Code*"
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="flatno"
+          placeholder="Flat/House No."
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="floorno"
+          placeholder="Floor No."
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="towerno"
+          placeholder="Tower No."
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="building"
+          placeholder="Building/Apartment Name"
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="address"
+          placeholder="Address*"
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="landmark"
+          placeholder="landmark/Area*"
+        />
+        <input
+          type="text"
+          class="input_feild"
+          id="city"
+          placeholder="City,State"
+        />
+        <div id="deliver_details_ka">
+        <h2>Delivery contact Details</h2>
+        <!-- <p>will be user to assist Delivery</p> -->
+          </div>
+        <input
+          type="text"
+          id="name"
+          class="input_feild"
+          placeholder="Enter Your name"
+        />
+
+        <input
+          type="number"
+          class="input_feild"
+          id="number"
+          placeholder="Enter your number"
+        />
+        <p>
+          This mobile number will receive an OTP, required for collecting the
+          order.
+        </p>
+
+        <button class="input_feild" onclick="submit()">Save Address</button>
+      </div>
+    </div>
+    <div id="ka_navbar">
+      <h3 id="ka_title">JioMart</h3>
+      <h5 id="ka_beta">BETA</h5>
+    </div>
+      <div id="background_ka">
+    <div id="ka_order">
+      <div id="ka_ordersummart">
+        <h3>Order Summary</h3>
+        <div id="ka_pa_threelogo">
+          <div >
+          
+            <i class="fa-solid fa-cart-plus"></i>
+            <a class="ka_pa_logos" href="#">Your Cart</a>
+            
+
+
+          </div>
+          
+          <div>
+        
+              <i class="fa-solid fa-list-check"></i>
+            <a class="ka_pa_logos" href="#">Order Summary</a>
+          </div>
+          <div>
+          
+            <i class="fa-solid fa-credit-card"></i>
+            <a class="ka_pa_logos" href="#">Payment</a>
+          </div>
+        </div>
+      </div>
+      <div id="ka_below_order">
+        <div id="ka_Delivey_Address">
+          <h2 id="ka_delivery_ka">Select Delivery Address</h2>
+          <div id="ka_deliver_details">
+            
+           
+          </div>
+          <button id="ka_address_box">Change/Add Address</button>
+        
+          <div id="ka_Basket_div">
+            <!-- <div id="ka_basket">
+              <h2>Fashion Basket</h2>
+              <h3>Total Cost</h3>
+            </div> -->
+            <!-- <p id="ka_cost">₹ 499.00</p>
+            <hr /> -->
+            <!-- <div id="ka_itemsfromCart"> -->
+              <!-- <div>
+                <img
+                  id="ka_itemImage"
+                  src="data:image/jpeg;base64,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"
+                  alt=""
+                />
+               </div> -->
+               <!-- <div id="ka_itemDetails"> -->
+                <!-- <h3>
+                  HELLCAT Boys Multicolor Cotton Blend Printed Pack of 2 T-shirt
+                </h3>
+                <p id="ka_prize">₹499.00</p>
+                <p>Size: 3-4 Y</p> --> 
+              <!-- </div>  -->
+              <div id="ka_itemsfromCart_main">
+                
+              
+              
+
+
+
+              </div>
+            </div>
+          </div>
+          <div id="ka_Payment">
+            <h2>Payment Details</h2>
+           
+  
+          </div>
+        </div>
+     
+        
+        <button id="ka_payment_button">Make Payment</button>
+      </div>
+
+      <!-- <button>Make Payment</button> -->
+    </div>
+  
+</div>
+  
+
+   
+    </script>
+  </body>
+</html>
+<script>
+  function addressd(p, fl, fo, t, b, a, l, c, n, mb) {
+    this.pincode = p;
+    this.flatno = fl;
+    this.floorno = fo;
+    this.towerno = t;
+    this.building = b;
+    this.address = a;
+    this.landmark = l;
+    this.city = c;
+    this.name = n;
+    this.mobile = mb;
+  }
+  let user = JSON.parse(localStorage.getItem("user")) || [];
+
+  let submit = () => {
+    let pincode = document.getElementById("pincode").value;
+    let flatno = document.getElementById("flatno").value;
+    let floorno = document.getElementById("floorno").value;
+    let towerno = document.getElementById("towerno").value;
+    let building = document.getElementById("building").value;
+    let address = document.getElementById("address").value;
+    let landmark = document.getElementById("landmark").value;
+    let city = document.getElementById("city").value;
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("number").value;
+    let a1 = new addressd(
+      pincode,
+      flatno,
+      floorno,
+      towerno,
+      building,
+      address,
+      landmark,
+      city,
+      name,
+      mobile
+    );
+    user.push(a1);
+    localStorage.setItem("user", JSON.stringify(user));
+  };
+  //  user=JSON.parse(localStorage.getItem("user"))||[];
+  let append = (user) => {
+    let ka_deliver_details = document.getElementById("ka_deliver_details");
+    ka_deliver_details.innerHTML=null;
+    user.forEach((el,index) => {
+      let jola = document.createElement("div");
+      let btn_for_remove=document.createElement("div");
+      btn_for_remove.setAttribute("class","removebtn")
+      jola.setAttribute("class", "ka_box");
+      let h2 = document.createElement("h2");
+      h2.innerText = el.name;
+      let p1 = document.createElement("p");
+      p1.innerText = el.flatno;
+      let p2 = document.createElement("p");
+      p2.innerText = el.floorno;
+      let p3 = document.createElement("p");
+      p3.innerText = el.building;
+      let p4 = document.createElement("p");
+      p4.innerText = el.address;
+      let p5 = document.createElement("p");
+      p5.innerText = el.landmark;
+      let p6 = document.createElement("p");
+      p6.innerText = el.city;
+      let p7 = document.createElement("p");
+      p7.innerText = `91-${el.mobile}`;
+      let btn_set = document.createElement("button");
+      btn_set.setAttribute("class", "btn_box");
+      btn_set.innerText = "Set Default";
+      let remove_btn=document.createElement("button");
+      remove_btn.innerText="Remove"
+      remove_btn.onclick=()=>{
+        del(index);
+      }
+      btn_for_remove.append(btn_set,remove_btn)
+      jola.append(h2, p1, p2, p3, p4, p5, p6, p7,btn_for_remove );
+
+      ka_deliver_details.append(jola);
+    });
+  };
+  append(user);
+  document
+    .querySelector("#ka_address_box")
+    .addEventListener("click", function () {
+      document.querySelector("#Adress_details").style.display = "block";
+      //   document.querySelector(".c3").setAttribute("href","myaccount.html");
+    });
+
+
+   document.getElementById("close").addEventListener("click",function(){
+    document.querySelector("#Adress_details").style.display = "none";
+
+   })
+   let del=(index)=>{
+    user.splice(index,1);
+    localStorage.setItem("user", JSON.stringify(user));
+    window.location.reload();
+
+    consol.log("kalesha")
+
+   }
+
+
+
+
+
+
+
+
+   let products = JSON.parse(localStorage.getItem("products"))||[];
+   let rendorDom=()=>{
+    let ka_itemsfromCart_main=document.getElementById("ka_itemsfromCart_main")
+    ka_itemsfromCart_main.innerHTML=null;
+    products.forEach((el,index)=>{
+      // divs creating
+      let ka_itemsfromCart=document.createElement("div")
+      ka_itemsfromCart.setAttribute("id","ka_itemsfromCart")
+      let bag=document.createElement("div");
+      bag.setAttribute("class","iteam_box");
+
+      let imag_div=document.createElement("div")
+
+      let ka_itemDetails_div=document.createElement("div")
+      ka_itemDetails_div.setAttribute("id","ka_itemDetails")
+      let ka_itemDetails_price_div=document.createElement("div")
+      ka_itemDetails_price_div.setAttribute("id","ka_itemDetails_price")
+      let font_awesome_div=document.createElement("div");
+      font_awesome_div.setAttribute("class","font_awesome_div")
+
+      let inputdiv=document.createElement("div");
+      inputdiv.setAttribute("class","inputdivs")
+
+      
+
+// divs end
+      let img=document.createElement("img");
+      img.setAttribute("class","ka_itemImage")
+      img.src=el.image;
+      imag_div.append(img)
+      let h3=document.createElement("h3");
+      let p1=document.createElement("p");
+      let p2=document.createElement("p");
+      let p3=document.createElement("p");
+      let p4=document.createElement("p");
+      p1.innerText=el.title
+      p2.innerText=`₹${el.pricenew}`
+      p3.innerText=`₹${el.priceold}`
+
+      p3.style.textDecoration="line-through"
+      p4.innerText=`You Can Save ₹${el.priceold-el.pricenew}`
+      // p4.innerText=el.priceold-el.pricenew;
+      p4.style.color="green"
+   
+      
+      
+ka_itemDetails_price_div.append(p2,p3,p4)
+      ka_itemDetails_div.append(h3,p1,ka_itemDetails_price_div)
+      bag.append(imag_div,ka_itemDetails_div)
+      
+      
+      ka_itemsfromCart.append(bag)
+      ka_itemsfromCart_main.append(ka_itemsfromCart)
+    })
+    
+   }
+
+  
+
+rendorDom(products)
+
+let dele=(index)=>{
+  products.splice(index,1);
+    localStorage.setItem("products", JSON.stringify(products));
+    window.location.reload();
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+   let MRP = JSON.parse(localStorage.getItem("MRP"))||[];
+  let ka_payment=document.getElementById("ka_Payment")
+
+   let ka_bag=document.getElementById("ka_bag")
+
+  let appendData=(data)=>{
+    console.log(data)
+    data.forEach((el)=>{
+       console.log(el.mrp)
+        let ka_bag=document.createElement("div");
+       ka_bag.setAttribute("class","ka_bag");
+       let h=document.createElement("h3");
+       h.setAttribute("class","ka_pay_details")
+       h.innerText="Payment Details"
+       let h2=document.createElement("p");
+       h2.setAttribute("class","ka_pay_details")
+       let bar=document.createElement("hr")
+       let h3=document.createElement("p");
+       let bar1=document.createElement("hr")
+       h3.setAttribute("class","ka_pay_details")
+       let h4=document.createElement("h3");
+       h4.setAttribute("class","ka_pay_details")
+       h2.innerText=`MRP Total:${el.mrp}`
+      //  console.log(MRP.product)
+
+     
+    // h2.innerText=null
+    h2.setAttribute("id","oldprice_id")
+       h3.innerText=` Product Disscount:${el.Product}`
+       h3.setAttribute("id","saveprice_id")
+
+       h4.innerText=`Total Amount:${el.Totalprice}  `
+       h4.setAttribute("id","total_amount")
+       let p4=document.createElement("p");
+       p4.innerText=`You Can Save ₹${el.Product}`
+      p4.style.color="green"
+      p4.setAttribute("class","greensave")
+       ka_bag.append(h,h2,bar,h3,bar1,h4,p4);
+       ka_payment.append(ka_bag)
+    })
+    
+       
+  }
+  appendData(MRP);
+
+  let ka_payment_button=document.getElementById("ka_payment_button");
+  ka_payment_button.addEventListener("click",function(){
+       myfunction();
+  })
+ 
+function myfunction(){
+  window.location.href="./payment.html"
+}
+
+</script>
