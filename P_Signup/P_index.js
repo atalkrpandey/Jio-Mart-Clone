@@ -1,4 +1,9 @@
 
+import navigation from "../satyajit/navbar component/navigationBar.js"
+document.getElementById("P_navbar").innerHTML=navigation();
+
+
+
 let login=JSON.parse(localStorage.getItem("login"));
 document.getElementById("P_usersNumber").innerText=login.number;
 
