@@ -10,6 +10,13 @@ body {
   position: fixed;
   top: -10px;
 }
+#D_Main{
+  width: 98%;
+}
+ #D_navbar{
+  position: fixed;
+  top: -10px;
+} 
 /* #D_navbar {
   width: 98%;
   height: 200px;
@@ -24,14 +31,15 @@ body {
 } */
 #D_main {
   /* border: 2px solid red; */
+ display: flex;
   width: 98%;
-  padding: 120px;
+  padding-top: 100px;
   margin: auto;
   margin-top: 20px;
 }
 #D_container {
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
 }
 #D_container > img {
   width: 80%;
@@ -40,12 +48,16 @@ body {
 }
 #D_sort {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 10px;
   margin-top: 40px;
 }
 #D_sort > h3 {
   font-size: 40px;
+}
+#p select{
+  width: 250px;
+  height: 25px;
 }
 #D_button {
   display: flex;
@@ -66,47 +78,46 @@ body {
   margin: auto;
   margin-top: 40px;
   display: flex;
-  
+  justify-content: space-around;
 }
-#D_all {
-  /* border: 1px solid red; */
-  width: 80%;
+ #items {
+ 
+  width: 90%;
   background-color: white;
   padding: 10px;
-  margin-left: 20%;
-}
-#D_all > div {
+  margin-left: 20px;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 10px;
-  /* border: 5px solid red; */
+
 }
 
 #items > div {
   background-color: white;
   border-radius: 10px;
   border: 0.5px solid gray;
-  /* border: 5px solid red; */
-  width: 280px;
+  
+  
   padding: 5px;
   
 }
 
-#items > div > img {
-  width: 270px;
+ #items > div > img {
+  width: 90%;
   margin-top: 5px;
   height: 320px;
-  /* border: 5px solid red; */
-  padding: 5px;
-  object-fit: cover;
+ 
+  padding: 10px;
+ 
   
 }
 #items > div > img + p {
   
   font-size: 16px;
   padding: 5px;
-  /* border: 5px solid red; */
+ 
   height: 50px;
   font-weight: 400;
 }
@@ -114,25 +125,38 @@ body {
 
 #items>div{
   cursor:pointer;
-}
+} 
 #items>div>div{
   
-  /* border: 5px solid red; */
-  height: 40px;
-  margin-top: 40px;
-  font-size: 20px;
+
+  
+  margin-top: 5px;
+  font-size: 16px;
   padding: 5px;
   font-weight: bold;
+  
 }
+#items>div>div>button{
+  width: 100%;
+  padding: 10px;
+  background-color:#008ECC;
+  border: transparent;
+  border-radius: 5px;
+  margin-top: 10px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+} 
 
  #f{
   /* border: 2px solid red; */
   width: 18%;
-  height: 1500px;
+   margin-left: 20px;
   background-color: white;
-  margin-left:-1487px;
+  
   padding: 10px;
   border-radius: 5px;
+  
 } 
 #f>h3{
 font-size: 25px;
@@ -177,35 +201,6 @@ font-size: 20px;
 width: 100%;
 margin-top: 10px;
 padding: 5px;
-}
-
-#x{
-  /* border: 5px solid red; */
-  width: 18%;
-  height: 300px;
-  margin-top: -326px;
-  margin-bottom: 28px;
-  background-color: white;
-  border-radius: 5px;
- 
-}
-#p{
-padding: 5px;
-}
-#p>h3{
-   font-size: 25px;
-   margin-bottom: 10px;
-   margin-left:15px;
-   
-  
-
-}
-#p>select{
-  width: 40%;
-  margin-top: 8px;
-  padding: 8px;
-  border: transparent;
-  font-size: 18px;
 }
 #D_bra{
   margin-bottom: 10px;
