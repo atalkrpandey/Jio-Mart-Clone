@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: whitesmoke;
+  }
+  /* #D_navbar {
+    width: 98%;
+    height: 200px;
+    border: 1px solid red;
+    margin: auto;
+  }
+  #D_navbar1 {
+    width: 98%;
+    height: 200px;
+    border: 1px solid red;
+    margin: auto;
+  } */
+  #D_main {
+    /* border: 2px solid red; */
+    width: 98%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #D_container {
+    display: flex;
+    justify-content: end;
+  }
+  #D_container > img {
+    width: 80%;
+    /* border: 2px solid red; */
+    
+  }
+  #D_sort {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  #D_sort > h3 {
+    font-size: 40px;
+  }
+  #D_button {
+    display: flex;
+    gap: 40px;
+  }
+  #D_button > button {
+    padding: 10px 30px 10px 30px;
+    font-size: 16px;
+    border-radius: 16px;
+    border: 0.5px solid blue;
+    cursor: pointer;
+  }
+  
+  /* // all product */
+  #D_allmain {
+    /* border: 5px solid red; */
+    width: 98%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    
+  }
+  #D_all {
+    /* border: 1px solid red; */
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+    margin-left: 20%;
+  }
+  #D_all > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    /* border: 5px solid red; */
+  }
+  
+  #items > div {
+    background-color: white;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    /* border: 5px solid red; */
+    width: 280px;
+    padding: 5px;
+    
+  }
+  
+  #items > div > img {
+    width: 260px;
+    margin-top: 5px;
+    height: 320px;
+    /* border: 1px solid red; */
+    padding: 10px;
+    object-fit: cover;
+    
+  }
+  #items > div > img + p {
+    
+    font-size: 16px;
+    padding: 5px;
+    /* border: 5px solid red; */
+    height: 50px;
+    font-weight: 400;
+  }
+  
+  
+  #items>div{
+    cursor:pointer;
+  }
+  #items>div>div{
+    
+    /* border: 2px solid red; */
+    
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+    
+  }
+  #items>div>div>button{
+    width: 100%;
+    padding: 10px;
+    background-color:#008ECC;
+    border: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  }
+  
+   #f{
+    /* border: 2px solid red; */
+    width: 18%;
+    height: 1500px;
+    background-color: white;
+    margin-left:-1487px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -365px;
+  } 
+  #f>h3{
+  font-size: 25px;
+  }
+  #f>form{
+  margin-top: 10px;
+  }
+  #f>form>input{
+  margin-top: 10px;
+  }
+  #f>form>h3{
+  margin-top: 10px;
+  
+  }
+  #f>form+h3{
+  margin-top: 10px;
+  }
+  #D_search{
+  width: 100%;
+  }
+  #D_scroll{
+  /* overflow: scroll; */
+  height: auto;
+  }
+  #D_scroll>form{
+  margin-top: 10px;
+  }
+  #D_scroll>form>input{
+  margin-top: 10px;
+  }
+  #D_size{
+  margin-top: 10px;
+  }
+  #D_size>form>input{
+  margin-top: 10px;
+  }
+  #D_brand{
+  margin-top: 10px;
+  font-size: 20px;
+  }
+  #D_brand+input{
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  }
+  #D_bra{
+    margin-bottom: 10px;
+  }
+  #D_bra+input{
+    padding: 5px;
+  }
+  /* #D_footer{
+    border: 1px solid red;
+    width: 98%;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+  } */
+  
+  
