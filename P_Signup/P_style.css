@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(244, 241, 241);
+}
+#P_container{
+    text-align: center;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#P_box1>img{
+    border-radius: 20px 0 0 0;
+}
+#P_box2{
+    text-align: left;
+   margin-top: 20px;
+   width: 40%;
+   margin-bottom: 20px;
+}
+#P_form{
+    display: flex;
+    flex-direction: column;
+}
+.P_input{
+    width: 80%;
+    padding: 10px;
+    margin: 25px 0 15px 0;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    /* color: rgb(250, 247, 247); */
+}
+#P_signup{
+    margin-left: -10px;
+}
+#P_wapp{
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#P_varify_box{
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+}
+#P_verifyBtn{
+    width: 90%;
+    padding: 10px;
+    color: white;
+    background-color:
+    #008ecc;
+    border: none;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+#P_footer{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+   
+}
+#P_footer>p{
+    width: 20%;
+    margin: auto;
+    font-size: 12px;
+}
+#P_footer>p>a{
+    color: red;
+    font-size: 12px;
+    text-decoration: none;
+    margin: auto;
+}
+#eye12{
+    display: none;
+}
+#eye21{
+    display: none;
+}
+#eye1:hover{
+    cursor: pointer;
+}
+#eye2:hover{
+    cursor: pointer;
+}
+#eye12:hover{
+    cursor: pointer;
+}
+#eye21:hover{
+    cursor: pointer;
+}
+#P_send:hover{
+    cursor: pointer;
+}
+
+#loading{
+    /* position: absolute; */
+    width: 100%;
+    margin-top: -70px;
+    margin-left: -100px;
+    text-align: center;
+    display: none;
+}
+#loading>img{
+    width: 60%;
+    height: 40%;
+   
+}
+#P_number{
+    margin-top: 10px;
+    font-size: 12px;
+}
+#P_change{
+    color: red;
+    font-size: 12px;
+}
+#P_send{
+    color: red;  
+    float: right; 
+    font-size: 12px; 
+    margin-left: 68%; 
+    margin-top: -15px;
+}
+#popup{
+    margin-top: 100px;
+    margin-right: 100px;
+    display: none;
+}
+#popup>img{
+    width: 62%;
+    height: 300px;
+ border-radius: 20px;
+}
+#otpFetchGif{
+    width: 300px;
+    height: 80px;
+    background-color: #008ecc;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: none;
+}
+.showFetch{
+    animation-name: show;
+    animation-duration: 1s;
+    /* animation-iteration-count: 3; */
+
+}
+@keyframes show {
+    0% {
+       margin-top: -80vh;
+        margin-left: -200%;
+       
+    }
+    100%{
+        /* width: 100%; */
+        margin-top: 0;
+        margin-left: 0%;
+      
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    #P_container{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #P_container>img{
+        margin: auto;
+    }
+    #P_form{
+        padding: 20px;
+    }
+    .P_input{
+        width: 150%;
+    }
+    #P_signup{
+        margin-left:0px ;
+    }
+    #P_box2{
+        margin-left: 20px;
+    }
+    #eye1{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #eye12{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #eye2{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #eye21{
+        position: relative;
+        top: -40px;
+        left: 320px;
+    }
+    #P_wapp{
+        width: 170%;
+    }
+   #P_footer>p{
+    width: 50%;
+   }
+   #P_varify_box{
+    width: 160%;
+   display: flex;
+   justify-content: space-between;
+   }
+   #P_change{
+    margin-top: 10px;
+   }
+   #P_send{
+    width: 100%;
+    margin-left: 268px;
+   }
+   #popup{
+    margin-top: 100px;
+    margin-right: 100px;
+    display: none;
+}
+#popup>img{
+    width:40vw;
+    height: 300px;
+ border-radius: 20px;
+}
+
+}
