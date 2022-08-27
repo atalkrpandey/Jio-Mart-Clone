@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="shortcut icon"
+    href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+    type="image/x-icon"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./P_style.css">
+
+    <link rel="stylesheet" href="../P_ProductDetailsPage/navbar.css">
+   
+    <title>Buy Grocery Online at Best Prices Pan India</title>
+</head>
+
+<body>
+    <audio src="./signup_successful.mp3" id="signup_sucessful"></audio>
+    <div id="navigation" style="height:120px;"></div>
+    <div id="P_container">
+        <div id="P_box1">
+            <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
+        </div>
+        <div id="P_box2">
+            <h2 id="P_signup">Sign-up</h2>
+            <h4 style="font-size: 14px; color: gray; font-weight: 300; margin: 8px 0 8px 0;">Please Enter your details.
+            </h4>
+            <div id="P_form">
+                <input type="text" id="P_firstName" class="P_input" placeholder="Your First Name" required>
+                <input type="text" class="P_input" id="P_lastName" placeholder="Last Name" required>
+                <input type="email" class="P_input" id="P_Email" placeholder="Enter your Email Id" required>
+                <div id="P_password_box"> <input type="password" id="P_password1" class="P_input"
+                        placeholder="Enter your Password" required> <i class="fa-solid fa-eye"
+                        style="color: gray; margin-left: -29px;" id="eye1"></i>
+                        <i class="fa-solid fa-eye-slash" style="color: gray; margin-left: -29px;" id="eye12"></i>
+                </div>
+              
+                <p id="P_pass" style="color:
+                rgba(0, 0, 0, 0.6); font-size: 11px;margin-top: -10px;">Use 8 or more characters with a mix of letters
+                    & numbers</p>
+                <div id="P_password_box2"> <input type="password" id="P_password2" class="P_input"
+                        placeholder="Enter your Password" required> <i class="fa-solid fa-eye" id="eye2"
+                        style="color: gray; margin-left: -29px;"></i>
+                        <i class="fa-solid fa-eye-slash" style="color: gray; margin-left: -29px;" id="eye21"></i>
+                </div>
+
+                <div id="P_wapp">
+                    <img src="https://seeklogo.com/images/W/whatsapp-icon-logo-BDC0A8063B-seeklogo.com.png" alt=""
+                        style="width: 24px; height: 24px; margin-top: 3px;">
+                    <p style="font-size: 14px; margin-left: -55px; width: 70%;">Enable order updates and important
+                        information on Whatsapp</p>
+                    <input type="checkbox" id="p_checkbox" style="margin-top: -5px ;">
+                </div>
+                  <!-- ----------------------POPUUP-------- -->
+                  <div id="popup">
+                    <img src="https://cdn.dribbble.com/users/11783/screenshots/3492735/animation.gif" alt="">
+                </div>
+                <div id="otpFetchGif" class="showFetch">
+                   Fetching OTP Please Wait for a While!
+                </div>
+                <!-- ----------------------POPUUP-------- -->
+<!-- -------------------------------Verify-------------------------- -->
+                <h2 style="margin-top: 40px;">Verify</h2>
+                <div id="P_varify_box">
+                    <p id="P_number"> We have sent 6 digit OTP on +91-<span id="P_usersNumber"></span>  </p>
+                    <p id="P_change">Change</p>
+                </div>
+                <input type="number" id="P_OTP" class="P_input" placeholder="Enter your OTP" required>
+                <div id="loading">
+                    <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="">
+                </div>
+                <p id="P_send">Send OTP </p>
+            </div>
+            <button id="P_verifyBtn">Verify</button>
+        </div>
+
+    </div>
+
+    <div id="P_footer">
+        <p> By continuing you agree to our <a href="https://www.jiomart.com/terms-and-conditions">Terms of service </a>
+            and <a href="https://www.jiomart.com/privacy-policy">Privacy & Legal Policy.</a> </p>
+    </div>
+
+    <!-- <div id="loading">
+        <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="">
+    </div> -->
+    <div id="sa-footer"></div>
+</body>
+
+</html>
+<script src="./P_index.js"></script>
+
+<script src="../P_ProductDetailsPage/navbar2.js" type="module"></script>
+<script type="module">
+    import footer from "../P_ProductDetailsPage/footer.js"
+        let footeContainer = document.querySelector('#sa-footer');
+        footeContainer.innerHTML = footer()
+      
+</script>
