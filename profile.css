@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+#Amain{
+    display: flex;
+    justify-content: space-around;
+}
+#Adetail{
+    display: flex;
+    margin: auto;
+}
+#Aleft{
+
+    border: 1px solid gray;
+    width: 40%;
+    height: 240px;
+    padding: 20px;
+    background-color: #519ef7;
+    border-radius: 10px;
+}
+#Aright{
+    
+    width: 50%;
+    height: 240px;
+    padding: 20px;
+    background-color: rgb(246, 246, 248);
+    border-radius: 10px;
+}
+#Auserlogo2{
+    width: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 50px;
+  
+}
+#Aheading{
+    padding: 30px 50px 20px 50px;
+    font-size: 25px;
+}
+#Ausername{
+    color: aliceblue;
+    font-size: 20px;
+}
+.Aptag{
+    color: #a7cdf8;
+}
+#Apay{
+    color: red
+}
+#Abutt1{
+    margin: 50px 10px 20px 20px;
+    width: 42%;
+    background-color: #abc2dd;
+    height: 40px;
+    padding: 0px 20px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  #Abutt2{
+    margin: 10px 20px 20px 10px;
+    width: 42%;
+    background-color: #a6c9f1;
+    height: 40px;
+    padding: 0px 20px;
+    border: none;
+    cursor: pointer;
+    color: #fefeff;
+  }
+  #Abutt3{
+    
+    margin: 0px 15px 20px 20px;
+    width: 89%;
+    background-color: #a6c9f1;
+    height: 40px;
+    padding: 0px 20px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+ 
+  }
+  #Alogolo{
+    margin-right: 10px;
+  }
+  #Alogopay{
+    margin-right: 10px;
+  }
+  #Abox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+ .AP{
+    color: gray;
+ }
+ #Ainfo{
+    margin: 15px 30px 30px 20px;
+ }
+ #Aedit{
+    position: relative;
+   left: 55%;
+   font-size: 20px;
+   color: red;
+   border: none;
+   cursor: pointer;
+ }
+ #Aextra{
+  width: 40%;
+  
+  padding: 20px;
+  background-color: #ecedee;
+  border-radius: 10px;
+  margin: 30px;
+ }
+ #Aextra h4{
+  margin: 25px 10px;
+  font-size: 16px;
+  color: rgb(65, 62, 62);
+ }
+
+ #Alogout{
+  border: none;
+  color: red;
+  cursor: pointer;
+ }
+ #Adropdown{
+  position: relative;
+  top: -550px;
+ left: 40%;
+  display: none;
+  border: 1px solid gray;
+   width: 400px;
+ background-color: #e5effc;
+ padding: 20px;
+ border-radius: 20px;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ #Adropdown label{
+   display: block;
+   margin:10px  30px;
+   color: #0c7af7;
+ }
+ #Adropdown input{
+  display: block;
+  backdrop-filter:inherit;
+  margin:10px  20px;
+  margin: auto;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 25px;
+}
+#Adropdown h3{
+  text-align: center;
+  color: rgb(100, 97, 97);
+}
+#Adropdown #Adob{
+  width: 50%;
+  display: inline;
+  margin: 20px 20px 10px 20px;
+}
+#Aselect{
+  margin-left: 35px;
+  height: 25px;
+}
+#Asave{
+  display: block;
+  width: 80%;
+  color: #ffffff;
+  height: 35px;
+  background-color: #0c7af7;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#Aclose{
+  position: relative;
+  top: -45px;
+  left: 150px;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  color: red;
+  cursor: pointer;
+}
+
