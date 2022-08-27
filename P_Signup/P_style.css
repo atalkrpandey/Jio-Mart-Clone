@@ -5,7 +5,14 @@
 body{
     background-color: rgb(244, 241, 241);
 }
+#P_navbar{
+    position: fixed;
+    margin-top: -35px;
+}
 #P_container{
+   
+    position:-webkit-sticky;
+    padding-top: 80px;
     text-align: center;
     margin: auto;
     width: 95%;
