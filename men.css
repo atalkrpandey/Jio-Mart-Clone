@@ -5,6 +5,7 @@
 }
 body {
   background-color: whitesmoke;
+  overflow-x: hidden;
 }
 #D_navbar{
   position: fixed;
@@ -58,10 +59,10 @@ body {
 }
 #D_all {
   /* border: 1px solid red; */
-  width: 80%;
+  width: 86%;
   background-color: white;
   padding: 10px;
-  margin-left: 20%;
+  margin-left: 18%;
 }
 #D_all > div {
   display: grid;
@@ -76,15 +77,15 @@ body {
   border-radius: 10px;
   border: 0.5px solid gray;
   /* border: 5px solid red; */
-  width: 280px;
+  width: 76%;
   padding: 5px;
   
 }
 
 #items > div > img {
-  width: 270px;
+  width: 100%;
   margin-top: 5px;
-  height: 320px;
+  height: 300px;
   /* border: 5px solid red; */
   padding: 5px;
   object-fit: cover;
@@ -118,7 +119,7 @@ body {
   width: 18%;
   height: 1500px;
   background-color: white;
-  margin-left:-1487px;
+  margin-left:-1296px;
   padding: 10px;
   border-radius: 5px;
 } 
