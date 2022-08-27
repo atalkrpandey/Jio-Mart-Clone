@@ -11,11 +11,15 @@
   />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./P_style.css">
+
+    <link rel="stylesheet" href="../P_ProductDetailsPage/navbar.css">
+   
     <title>Buy Grocery Online at Best Prices Pan India</title>
 </head>
 
 <body>
     <audio src="./signup_successful.mp3" id="signup_sucessful"></audio>
+    <div id="navigation" style="height:120px;"></div>
     <div id="P_container">
         <div id="P_box1">
             <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
@@ -83,8 +87,16 @@
     <!-- <div id="loading">
         <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="">
     </div> -->
-
+    <div id="sa-footer"></div>
 </body>
 
 </html>
 <script src="./P_index.js"></script>
+
+<script src="../P_ProductDetailsPage/navbar2.js" type="module"></script>
+<script type="module">
+    import footer from "../P_ProductDetailsPage/footer.js"
+        let footeContainer = document.querySelector('#sa-footer');
+        footeContainer.innerHTML = footer()
+      
+</script>
