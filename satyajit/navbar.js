@@ -74,3 +74,7 @@ let listLogo = document.querySelector("#Asearchlogo");
 listLogo.addEventListener('click',() => {
     document.getElementById("Asearchdiv").style.visibility="hidden";
 })
+document.getElementById("Aaccount").addEventListener("click",()=>{
+  console.log("hii")
+  window.location.href="./profile.html"
+})
