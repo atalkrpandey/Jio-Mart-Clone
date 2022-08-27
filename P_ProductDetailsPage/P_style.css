@@ -27,10 +27,10 @@
     /* margin: auto; */
     text-align: left;
     width: 45%;
-    height: 120vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    
+    margin-bottom: 20px;
     /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
 }
 #div11{

@@ -72,18 +72,18 @@ let append = () => {
 
     </div>
 
-    <div id="P_social" style="display: flex; width: 20%; justify-content: space-between; text-align: center; margin-left: 3%; margin-top: 4%;">
+    <div id="P_social" style="display: flex; width: 20%; justify-content: space-between; text-align: center; margin-left: 3%; margin-top: 4%; margin-bottom:10px; ">
 
-   <a href="https://twitter.com/intent/tweet?text=TXOR%20STORM%20M5,%20Smart%20Watch%20Fitness%20Band%2035%20mm%20Black%20Color%20Touch%20Screen%20for%20ANDROID%20and%20IOS,%20Black%20Strap%20-%20JioMart&url=https%3A%2F%2Fwww.jiomart.com%2Fp%2Felectronics%2Ftxor-storm-m5-smart-watch-fitness-band-35-mm-black-color-touch-screen-for-android-and-ios-black-strap%2F591301931&related=">   <div id="P_twitter" style="background-color: rgb(6, 164, 226); padding: 6px; color: white; height: 18px;">  <i class="fa-brands fa-twitter"></i> </div> </a>
-    <a href="https://www.facebook.com/dialog/share?app_id=140586622674265&display=popup&href=https%3A%2F%2Fwww.jiomart.com%2Fp%2Felectronics%2Ftxor-storm-m5-smart-watch-fitness-band-35-mm-black-color-touch-screen-for-android-and-ios-black-strap%2F591301931&redirect_uri=http%3A%2F%2Fs7.addthis.com%2Fstatic%2Fthankyou.html">  <div id="P_facebook" style="background-color: blue; padding: 9px; color: white; height: 12px;"> <i class="fa-brands fa-facebook-f"></i> </div> </a>
-   <a href="https://api.whatsapp.com/send?text=TXOR%20STORM%20M5%2C%20Smart%20Watch%20Fitness%20Band%2035%20mm%20Black%20Color%20Touch%20Screen%20for%20ANDROID%20and%20IOS%2C%20Black%20Strap%20-%20JioMart%20https%3A%2F%2Fwww.jiomart.com%2Fp%2Felectronics%2Ftxor-storm-m5-smart-watch-fitness-band-35-mm-black-color-touch-screen-for-android-and-ios-black-strap%2F591301931">  <div id="P_whatsapp" style="background-color: green; padding: 6px; color: white;height: 18px; text-align: center;"> <i class="fa-brands fa-whatsapp"></i> </div> </a> 
+   <a href="https://twitter.com/intent/tweet?text=TXOR%20STORM%20M5,%20Smart%20Watch%20Fitness%20Band%2035%20mm%20Black%20Color%20Touch%20Screen%20for%20ANDROID%20and%20IOS,%20Black%20Strap%20-%20JioMart&url=https%3A%2F%2Fwww.jiomart.com%2Fp%2Felectronics%2Ftxor-storm-m5-smart-watch-fitness-band-35-mm-black-color-touch-screen-for-android-and-ios-black-strap%2F591301931&related=">   <div id="P_twitter" style="background-color: rgb(6, 164, 226); padding: 6px; color: white; height: 30px;">  <i class="fa-brands fa-twitter" ></i> </div> </a>
+    <a href="https://www.facebook.com/dialog/share?app_id=140586622674265&display=popup&href=https%3A%2F%2Fwww.jiomart.com%2Fp%2Felectronics%2Ftxor-storm-m5-smart-watch-fitness-band-35-mm-black-color-touch-screen-for-android-and-ios-black-strap%2F591301931&redirect_uri=http%3A%2F%2Fs7.addthis.com%2Fstatic%2Fthankyou.html">  <div id="P_facebook" style="background-color: blue; padding: 9px; color: white; height: 30px;"> <i class="fa-brands fa-facebook-f"></i> </div> </a>
+   <a href="https://api.whatsapp.com/send?text=TXOR%20STORM%20M5%2C%20Smart%20Watch%20Fitness%20Band%2035%20mm%20Black%20Color%20Touch%20Screen%20for%20ANDROID%20and%20IOS%2C%20Black%20Strap%20-%20JioMart%20https%3A%2F%2Fwww.jiomart.com%2Fp%2Felectronics%2Ftxor-storm-m5-smart-watch-fitness-band-35-mm-black-color-touch-screen-for-android-and-ios-black-strap%2F591301931">  <div id="P_whatsapp" style="background-color: green; padding: 6px; color: white;height: 30px; text-align: center;"> <i class="fa-brands fa-whatsapp"></i> </div> </a> 
 
     </div>
        `;
 }
 
 append();
-let ProductsArr=JSON.parse(localStorage.getItem("products"))||[];
+let ProductsArr=[];
 document.getElementById("P_cart").addEventListener("click", function(){
     ProductsArr.push(products);
 localStorage.setItem("products", JSON.stringify(ProductsArr));

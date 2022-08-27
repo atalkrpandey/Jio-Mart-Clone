@@ -8,10 +8,14 @@
     <link rel="shortcut icon" href="https://www.jiomart.com/assets/smartweb/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./P_style.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <!-- <link rel="stylesheet" href="./navbar2.css"> -->
     <title>TX</title>
 </head>
 
 <body>
+
+    <div id="navigation" style="height:120px;"></div>
     <div id="P_container1"></div>
 
     <div id="returnPolicy"  style="width: 90%; height: 15%; border-top: 1px solid gray; margin: auto; margin-bottom: 20px; ">
@@ -54,8 +58,18 @@
         </div>
     </div>
 
+    <div id="sa-footer"></div>
+
 </body>
 
 </html>
 
 <script src="./P_index.js"></script>
+<script src="./navbar2.js" type="module"></script>
+
+<script type="module">
+    import footer from "./footer.js"
+        let footeContainer = document.querySelector('#sa-footer');
+        footeContainer.innerHTML = footer()
+      
+</script>
