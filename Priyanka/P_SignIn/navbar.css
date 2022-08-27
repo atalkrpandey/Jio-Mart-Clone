@@ -3,12 +3,6 @@
     margin: 0px;
     box-sizing: border-box;
 }
-body{
-    width: 110vw;
-    overflow-x: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-}
 #Anavbar{
     
     position: fixed;
@@ -142,24 +136,7 @@ body{
         font-weight:lighter;
 
     }
-    #Asearchdiv{
-        position:absolute;
-        width: 500px;
-        top: 60px;
-        height: 500px;
-        left: 30%;
-        border: 1px solid gray;
-        visibility: hidden;
-        overflow: scroll;
-        background-color:#a3ddf8;
-       
-    }
-    .AappendName{
-        display: flex;
-        border: 1px solid gray;
-        padding: 20px;
-        cursor: pointer;
-    }
+   
     #Aclose{
         position:absolute;
         padding: 10px;
@@ -193,13 +170,7 @@ body{
         cursor: pointer;
         background-color: rgba(0,0,0,.2);
     }
-   
-
-    *{
-        padding: 0px;
-        margin: 0px;
-        /* box-sizing: border-box; */
-    }
+    
     #Adeliver{
         width: 150px;
        display: flex;

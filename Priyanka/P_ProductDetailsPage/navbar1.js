@@ -3,9 +3,7 @@
 function navigation(){
     return` 
     <div id="Anavabar" class="sa-nav-sticky">
-    <div id="Asearchdiv" style="z-index: 2000;">
-
-    </div>
+      
     <div>
     
 <div id="Atopnavbar" style="height:1%; background-color: #008ecc;"  >
@@ -16,30 +14,30 @@ function navigation(){
       </menu>
   </div>
   <div>
-      <a href=""><img  style="width: 50%;" id="Aweblogo" src="https://www.jiomart.com/assets/version1659733069/smartweb/images/jiomart_logo_beta.svg" alt=""></a>
+      <a href="./index.html"><img  style="width: 50%;" id="Aweblogo" src="https://www.jiomart.com/assets/version1659733069/smartweb/images/jiomart_logo_beta.svg" alt=""></a>
   </div>
   <div> 
-      <input style="height:40px;border: none; outline: none;width: 376%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
+      <input style="height:40px;border: none; outline: none;width: 365%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
 
-      <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 4%;left: 74%;">
+      <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 22%;left: 71%;">
        
           <i id="Asearchlogo" style="font-size:16px;color: rgb(41, 37, 37);" class="fa-solid fa-list" >
           </i>
       </button>
   </div>
 
-  <div id="Alog_sign" style="position: absolute; left: 65.5%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 12%; font-weight: 400;">
-      <i style="font-size: 20px;margin-top:2%;" id="Auserlogo" class="fa-solid fa-user"></i>
+  <div id="Alog_sign" style="position: absolute; left: 62.5%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 12%; font-weight: 400;">
+      <i style="font-size: 20px;margin-top:25%;" id="Auserlogo" class="fa-solid fa-user"></i>
       <span id="Ausername">
           
       </span>
-      <a id="Alogin" style="position:absolute; left:15%;top:40%;" href="" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 40%;" href="#"> Sign up</a>
+      <a id="Alogin" style="position:absolute; left:15%;top: 200%;" href="" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 200%;" href=""> Sign up</a>
       </span>
   </div>
   <div id="Acartdiv"  style="position: absolute; left: 85%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 7%; font-weight: 400;">
       
-       <i style="font-size: 20px;margin-top:8%;" id="Acartlogo" class="fa-solid fa-cart-shopping"></i>
-       <span id="Aitemcount" style="position:absolute; left:20%;top: 40%; background-color: red;width:18%;text-align: center;font-size:13px;font-weight: 600;border-radius: 50%;">
+       <i style="font-size: 20px;margin-top:45%;" id="Acartlogo" class="fa-solid fa-cart-shopping"></i>
+       <span id="Aitemcount" style="position:absolute; left:10%;top: 140%; background-color: red;width:18%;text-align: center;font-size:13px;font-weight: 600;border-radius: 50%;">
        0
        </span> 
        <span style="position:absolute; left:30%;top: 200%;">
@@ -219,8 +217,8 @@ function navigation(){
           <button id="Across" style="background-color:transparent; border:none;margin-left:-10%;">  <i  style="color:#fff; font-size: 23px;cursor: pointer;font-weight:600;" class="fa-solid fa-xmark" ></i></button>
       </h2>
       <div id="sa-btn-grp" style="display: flex;width:95%;margin: auto;margin-top: -15px;">
-          <button id="Aaccount" style=" margin-left:-5px;padding: 5px 40px; font-size: 15px;font-weight: 600;">Account</button>
-          <button id="Aoffer"  style="margin-left:5px;padding: 5px 54px; font-size: 15px;font-weight: 600;">Order</button>
+          <button id="Aaccount" style=" margin-left:-5px;padding: 5px 51px; font-size: 15px;font-weight: 600;">Account</button>
+          <button id="Aoffer"  style="margin-left:5px;padding: 5px 51px; font-size: 15px;font-weight: 600;">Order</button>
       </div>
      
   </div>

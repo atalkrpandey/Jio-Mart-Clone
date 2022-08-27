@@ -1,6 +1,6 @@
 
 function navigation(){
-    return` <div id="Anavabar" class="sa-nav-sticky">
+    return`  <div id="Anavabar" class="sa-nav-sticky">
       
     <div>
     
@@ -15,32 +15,35 @@ function navigation(){
       <a href="./index.html"><img  style="width: 50%;" id="Aweblogo" src="https://www.jiomart.com/assets/version1659733069/smartweb/images/jiomart_logo_beta.svg" alt=""></a>
   </div>
   <div> 
-      <input style="height:40px;border: none; outline: none;width: 455%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
-      <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 3%;left: 70%;">
+      <input style="height:40px;border: none; outline: none;width: 365%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
+
+      <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 22%;left: 71%;">
        
           <i id="Asearchlogo" style="font-size:16px;color: rgb(41, 37, 37);" class="fa-solid fa-list" >
           </i>
       </button>
   </div>
+
   <div id="Alog_sign" style="position: absolute; left: 62.5%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 12%; font-weight: 400;">
-      <i style="font-size: 20px;margin-top:-5%;" id="Auserlogo" class="fa-solid fa-user"></i>
+      <i style="font-size: 20px;margin-top:25%;" id="Auserlogo" class="fa-solid fa-user"></i>
       <span id="Ausername">
           
       </span>
-      <a id="Alogin" style="position:absolute; left:15%;top: 30%;" href="" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 30%;" href=""> Sign up</a>
+      <a id="Alogin" style="position:absolute; left:15%;top: 200%;" href="" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 200%;" href=""> Sign up</a>
       </span>
   </div>
-  <div id="Acartdiv"  style="position: absolute; left: 85%; % display: flex;align-items: center;height: 8%; font-size: 17px;width: 7%; font-weight: 400;">
+  <div id="Acartdiv"  style="position: absolute; left: 85%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 7%; font-weight: 400;">
       
-       <i style="font-size: 20px;margin-top:10%;" id="Acartlogo" class="fa-solid fa-cart-shopping"></i>
-       <span id="Aitemcount" style="position:absolute; left:10%;top: 30%; background-color: red;width:18%;text-align: center;font-size:13px;font-weight: 600;border-radius: 50%;">
+       <i style="font-size: 20px;margin-top:45%;" id="Acartlogo" class="fa-solid fa-cart-shopping"></i>
+       <span id="Aitemcount" style="position:absolute; left:10%;top: 140%; background-color: red;width:18%;text-align: center;font-size:13px;font-weight: 600;border-radius: 50%;">
        0
        </span> 
-       <span style="position:absolute; left:30%;top: 30%;">
+       <span style="position:absolute; left:30%;top: 200%;">
           Cart
        </span>
        </div>
 </div>
+
 <div class="Adropdown">
   <div id="Adeliver">
       <i id="Aloimg" class="fa-solid fa-location-dot" style="font-size:25px; margin-left:20px;margin-top: 5px;"></i>
@@ -138,6 +141,7 @@ function navigation(){
     </li>
     <li>
       Fashion  <i class="fa-solid fa-angle-down"></i>
+
       <div class="Ainner1">
         <ul>
           <li>Men</li>
@@ -233,7 +237,9 @@ function navigation(){
 </div>
 </div>
 </div>
+
 <div id="blur-div" style="width: 100%;margin-left: -2000px; height:2020%; background-color:rgba(0,0,0,.2);position: absolute;z-index:101;top: 0;">
+
 </div>
     `
 }

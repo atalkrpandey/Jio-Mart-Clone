@@ -6,10 +6,14 @@
 body {
   background-color: whitesmoke;
 }
-
+#D_navbar{
+  position: fixed;
+  top: -10px;
+}
 #D_main {
   /* border: 2px solid red; */
   width: 98%;
+  padding-top: 120px;
   margin: auto;
   margin-top: 20px;
 }
