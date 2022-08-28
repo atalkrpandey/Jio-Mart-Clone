@@ -23,6 +23,7 @@ document.getElementById("circlrArrow").addEventListener("click", function(){
         document.getElementById("popup").style.display="block";
         document.getElementById("P_form").style.display="none";
         document.getElementById("login_successful").play();
+        window.location.href = "../../satyajit/index.html"
 
 
 
@@ -40,3 +41,29 @@ document.getElementById("circlrArrow").addEventListener("click", function(){
        
     }
 })
+
+
+
+////////////////// NAV MENU///////////////////////////
+
+
+//     document.getElementById("Alogodiv").addEventListener("click",()=>{
+//     document.getElementById("Amenu").style.marginLeft="0px";
+//     document.getElementById("Amenu").style.transition="0.5s all ease-in-out";
+   
+//     document.getElementById("Amenu").style.opacity="1";
+//     document.getElementById("Amenu").style.opacity="1";
+//     document.getElementById("blur-div").style.marginLeft="0px";
+//     document.getElementById("blur-div").style.transition="0.9s all ease-in-out";
+//     document.querySelector("body").style.overflow="hidden";
+    
+//   })
+//   document.getElementById("Across").addEventListener("click",()=>{
+//     document.getElementById("Amenu").style.marginLeft="-1000px";
+//     document.getElementById("Amenu").style.transition="1s all ease-in-out";
+//     document.getElementById("Amenu").style.opacity="0";
+//     document.getElementById("blur-div").style.marginLeft="-2000px";
+//     document.getElementById("blur-div").style.transition="0.5s all ease-in-out";
+//     document.querySelector("body").style.overflow="scroll";
+ 
+//   })

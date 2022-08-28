@@ -16,9 +16,14 @@
   <script src="https://kit.fontawesome.com/74f19205b6.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./men.css" />
+    <style>
+      *{
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <div id="D_navbar"></div>
+    <div id="D_navbar" style="width: 100%;"></div>
     <!-- <div id="D_navbar1"></div> -->
     <div id="D_main">
       <div id="p">
@@ -207,13 +212,25 @@
   import navigation from "./components/navbar.js"
   document.getElementById("D_footer").innerHTML=footer();
   document.getElementById("D_navbar").innerHTML=navigation();
-
+  cartItemCount()
+  function cartItemCount(){
     
+    let cartPlace = document.querySelector('#Aitemcount');
+    let cartItem = JSON.parse(localStorage.getItem('products'));
+    cartPlace.innerHTML = null
+    cartPlace.innerHTML = cartItem.length;
+    console.log( cartItem.length)
+    
+}  
+
+
 let ProductData = JSON.parse(localStorage.getItem('DATA'))
 
 
+document.querySelector('#Acartdiv').addEventListener('click',() => {
+    window.location.href = "./cart.html";
 
-
+  })
 
 document.getElementById("Alogodiv").addEventListener("click",()=>{
     document.getElementById("Amenu").style.marginLeft="0px";
@@ -268,14 +285,7 @@ document.getElementById("Alogodiv").addEventListener("click",()=>{
 
 
   // cartItemCount()
-function cartItemCount(){
-    
-    let cartPlace = document.querySelector('#Aitemcount');
-    let cartItem = JSON.parse(localStorage.getItem('products'));
-    cartPlace.innerHTML = null
-    cartPlace.innerHTML = cartItem.length
-    
-}
+
  
 let listLogo = document.querySelector("#Asearchlogo");
 
@@ -289,6 +299,9 @@ document.getElementById("Aaccount").addEventListener("click",()=>{
 
 
 </script>
+
+
+
 <script >
 
  
@@ -307,6 +320,7 @@ document.getElementById("Aaccount").addEventListener("click",()=>{
     item.innerHTML = null;
     data.forEach(function (el) {
       let box = document.createElement("div");
+      box.style.cursor = 'pointer'
       box.addEventListener("click", () => {
         show(el);
       });
@@ -361,7 +375,10 @@ document.getElementById("Aaccount").addEventListener("click",()=>{
   let show = (el) => {
     localStorage.setItem("product", JSON.stringify(el));
 
+    window.location.href =  './Priyanka/P_ProductDetailsPage/P_index.html'
+
   };
+
 
   async function brand() {
     let query = document.getElementById("D_S").value;

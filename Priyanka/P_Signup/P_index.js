@@ -1,6 +1,8 @@
-
+console.log('sgchguhcgshcdjhcjhcbf')
 let login=JSON.parse(localStorage.getItem("login"));
-document.getElementById("P_usersNumber").innerText=login.number;
+    document.getElementById("P_usersNumber").innerText=login.number;
+
+
 
 let otp;
 
@@ -42,7 +44,7 @@ if(document.getElementById("P_password2").type=="text"){
 document.getElementById("P_send").addEventListener("click",function(){
     otp=Math.floor((Math.random() * 1000000) + 1);
         // alert(otp);
-
+         console.log('helooooooooooo')
         // document.querySelector("#loading").style.display="block";
         document.querySelector("body").style.opacity="0.5";
         document.getElementById("otpFetchGif").style.display="block";
@@ -122,9 +124,11 @@ function updateNumber(){
 
             if(document.getElementById("P_OTP").value !=otp){
                 alert("Please fill with correct OTP!");
-            }else if(document.getElementById("P_password1").value.trim().length !=8){
-                alert("Please enter a password as per requirement!");
-            }else{
+            }
+            // else if(document.getElementById("P_password1").value.trim().length !=8){
+            //     alert("Please enter a password as per requirement!");
+            // }
+            else{
                
 
                 arr.push(data);

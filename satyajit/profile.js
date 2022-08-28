@@ -1,5 +1,6 @@
-let detail=JSON.parse(localStorage.getItem("signup"));
-if(detail!==null){                               
+let detail=JSON.parse(localStorage.getItem("signup")) [0];
+
+if(detail !==null){                               
     document.getElementById("Ausername").innerText=detail.firstname+" "+detail.lastname;
 document.getElementById("Ausername1").innerText=detail.firstname+" "+detail.lastname;
 document.getElementById("Auseremail").innerText=detail.email;

@@ -26,6 +26,7 @@
             top: 0;
             left: 0;
         }
+
     </style>
 
 </head>
@@ -53,7 +54,7 @@
           <div> 
               <input style="height:40px;border: none; outline: none;width: 365%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
         
-              <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 22%;left: 71%;">
+              <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 22%;left: 68%;">
                
                   <i id="Asearchlogo" style="font-size:16px;color: rgb(41, 37, 37);" class="fa-solid fa-list" >
                   </i>
@@ -65,7 +66,7 @@
               <span id="Ausername">
                   
               </span>
-              <a id="Alogin" style="position:absolute; left:15%;top: 200%;" href="" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 200%;" href="../P_Signup/P_index.html"> Sign up</a>
+              <a id="Alogin" style="position:absolute; left:15%;top: 200%;" href="../Priyanka/P_SignIn/P_index.html" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 200%;" href="../Priyanka/P_Signup/P_index.html"> Sign up</a>
               </span>
           </div>
           <div id="Acartdiv"  style="position: absolute; left: 85%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 7%; font-weight: 400;">
@@ -94,7 +95,7 @@
               <div class="Ainner">
                 <div class="Ainner1">
                   <ul>
-                    <li>Fruits & Vegetables</li>
+                    <li><a href="../fruit.html">Fruits & Vegetables</a></li>
                     <li>Dairy & Bakery</li>
                     <li>Staples</li>
                     <li>Snacks & Branded Food</li>
@@ -119,7 +120,7 @@
               <div class="Ainner">
                 <div class="Ainner1">
                   <ul>
-                    <li>Apples & Pears</li>
+                    <li > <a href="../apples_pears.html">Apples & Pears</a> </li>
                     <li>Avocado,Peach, Plum</li>
                     <li>Banana, Melona & Coconut</li>
                     <li>Cherries, Berries & Exotic Fruits</li>
@@ -180,8 +181,8 @@
         
               <div class="Ainner1">
                 <ul>
-                  <li>Men</li>
-                  <li>Women</li>
+                  <li> <a href="../Men.html">Men</a> </li>
+                  <li> <a href="../women.html">Women</a> </li>
                   <li>Boys</li>
                   <li>Girls</li>
                   <li>Junior Boys</li>
@@ -246,7 +247,7 @@
               <h2>
                   <i id="Auserlogo2" class="fa-solid fa-circle-user" style="font-size:20px"></i>
                    <span style="margin-left:-21px; font-size: 17px; font-weight: 400;" >Hello,</span> 
-                  <span style="margin-left:0px;text-transform: capitalize; font-size: 17px;font-weight: 400;" > Sign in</span>
+                  <span id="menuUserName" style="margin-left:0px;text-transform: capitalize; font-size: 17px;font-weight: 400;" > Sign in</span>
                 
                   <button id="Across" style="background-color:transparent; border:none;margin-left:-10%;">  <i  style="color:#fff; font-size: 23px;cursor: pointer;font-weight:600;" class="fa-solid fa-xmark" ></i></button>
               </h2>
@@ -1207,3 +1208,24 @@
 </script>
 
 <script src="./navbar.js"></script>
+
+<script>
+    let userDetails = document.querySelector('#Alog_sign #Alogin');
+    let signupData = document.querySelector('#Alog_sign #Asignup');
+    let manuUserName =  document.querySelector('#menuUserName');
+    let userSavedData = JSON.parse(localStorage.getItem('signup'));
+if(userSavedData){
+      userDetails.innerHTML = null;
+      signupData.innerHTML = null;
+      manuUserName.innerHTML  = null;
+
+      userDetails.innerText = userSavedData[0].firstname;
+      manuUserName.innerHTML = userSavedData[0].firstname;
+
+    console.log(userSavedData[0].firstname)
+}
+  
+  document.querySelector('#Acartdiv').addEventListener('click',() => {
+    window.location.href = "../cart.html"
+  })
+</script>

@@ -458,13 +458,21 @@
 </html>
 <script>
    window.addEventListener("load",()=>{
-    rendorDom(products)
+    let products = JSON.parse(localStorage.getItem("products"))||[];
+    // let arr = [... new Set(products)];
+    // console.log({arr})
+    rendorDom()
    })
-   let count=1;
+
    let products = JSON.parse(localStorage.getItem("products"))||[];
-   let rendorDom=()=>{
-    let ka_itemsfromCart_main=document.getElementById("ka_itemsfromCart_main")
+
+   let rendorDom = () => {
+    let ka_itemsfromCart_main = document.getElementById("ka_itemsfromCart_main")
     ka_itemsfromCart_main.innerHTML=null;
+    // arr.some(el => {
+    //   el === el.
+    // })
+  
     products.forEach((el,index)=>{
       // divs creating
       let ka_itemsfromCart=document.createElement("div")
@@ -489,19 +497,19 @@
 // divs end
       let img=document.createElement("img");
       img.setAttribute("class","ka_itemImage")
-      img.src=el.image;
+      img.src = el.image || el.Image ;
       imag_div.append(img)
       let h3=document.createElement("h3");
       let p1=document.createElement("p");
       let p2=document.createElement("p");
       let p3=document.createElement("p");
       let p4=document.createElement("p");
-      p1.innerText=el.title
-      p2.innerText=`₹${el.pricenew}`
-      p3.innerText=`₹${el.priceold}`
+      p1.innerText=el.title || el.clsgetname
+      p2.innerText=`₹${el.pricenew || el.final_price}` 
+      p3.innerText=`₹${el.priceold || el.price} `
 
       p3.style.textDecoration="line-through"
-      p4.innerText=`You Can Save ₹${el.priceold-el.pricenew}`
+      p4.innerText=`You Can Save ₹${(el.priceold-el.pricenew ) || el.save_price}`
       // p4.innerText=el.priceold-el.pricenew;
       p4.style.color="green"
       let i=document.createElement("i");
@@ -510,7 +518,7 @@
      
       i.setAttribute("id","plus")
        let inp=document.createElement("button")
-        inp.innerText="1"
+        inp.innerText= '1'
       //   let inp1=document.createElement("button")
       //   inp1.innerText="0"
       //   inp1.setAttribute("id","increment")
@@ -518,16 +526,27 @@
       i1.setAttribute("class","fa-solid fa-circle-minus")
       i1.setAttribute("id","minus")
       
+
+      let count = 0;
+
       i.onclick=()=>{
-        inc(el)
+       
          inp.innerText++;
-        count++
+         count++
+         inc(el)
+        
+       
       }
       i1.onclick=()=>{
-        dec(el)
-        inp.innerText--;
         count--;
+        inp.innerText--;
+            dec(el)
+     
+      
       }
+  //  console.log(count)
+  //  console.log(inp.innerText)
+  
 ka_itemDetails_price_div.append(p2,p3,p4)
       ka_itemDetails_div.append(h3,p1,ka_itemDetails_price_div)
       bag.append(imag_div,ka_itemDetails_div)
@@ -588,8 +607,8 @@ let dele=(index)=>{
   let append=(products)=>{
     let ka_payment=document.getElementById("ka_Payment")
     products.forEach((el)=>{
-      tc+=el.priceold;
-      tc1+=el.pricenew
+      tc+=el.priceold || el.price;
+      tc1+=el.pricenew || el.final_price;
       // console.log(tc)
 ka_payment.innerHTML=null;
         let ka_bag=document.createElement("div");
@@ -636,7 +655,7 @@ ka_payment.innerHTML=null;
        
   }
   append(products);
-  let totalDisscount=tc-tc1
+  let totalDisscount = tc-tc1
 // console.log(totalDisscount)  
 
 
@@ -644,8 +663,8 @@ ka_payment.innerHTML=null;
  
  
   let MRP = JSON.parse(localStorage.getItem("MRP"))||[];
- let firstline=tc;
- let secondline=tc1;
+ let firstline = tc;
+ let secondline = tc1;
  console.log(secondline,"secondline")
 
 
@@ -655,11 +674,11 @@ ka_payment.innerHTML=null;
 
 let inc=(el)=>{
   console.log(el)
-  let disscount=el.priceold-el.pricenew
+  let disscount=(el.priceold-el.pricenew) || el.save_price
 totalDisscount+=disscount
 console.log("totalDisscount",totalDisscount)
- firstline+=(el.priceold)
- secondline+=(el.pricenew)
+ firstline+=(el.priceold || el.price)
+ secondline+=(el.pricenew || el.final_price)
 //  console.log(firstline,"f")
 //  console.log(secondline,"s")
 
@@ -732,15 +751,15 @@ let ka_pay_button=document.getElementById("ka_pay_button");
 
 
 
- let dec=(el,index)=>{
-  firstline-=(el.priceold)
-   totalprice1-=el.priceold-el.pricenew;;
-   totalprice2-=el.pricenew;
+ let dec = (el,index)=>{
+  firstline-=(el.priceold) || el.price
+   totalprice1-=el.priceold-el.pricenew || el.final_price;
+   totalprice2-=el.pricenew || el.final_price;
 
 
-   let disscount=el.priceold-el.pricenew
-totalDisscount-=disscount
-   console.log(totalprice)  
+   let disscount=(el.priceold-el.pricenew) || el.save_price
+   totalDisscount-=disscount
+  //  console.log(totalprice)  
    let oldprice_id=document.getElementById("oldprice_id");
     oldprice_id.innerText=`MRP Total:${firstline}`;
 
@@ -755,9 +774,10 @@ totalDisscount-=disscount
     let greensave=document.getElementById("greensave");
     greensave.innerText=`You Can Save${totalDisscount}`
 
-    if(firstline<=0){
+    if(firstline <= 0){
+      console.log(firstline)
         let oldprice_id=document.getElementById("oldprice_id");
-    oldprice_id.innerText="MRP Total:0";
+        oldprice_id.innerText="MRP Total:0";
     dele(index)
     let ka_itemsfromCart=document.getElementById("ka_itemsfromCart")
     

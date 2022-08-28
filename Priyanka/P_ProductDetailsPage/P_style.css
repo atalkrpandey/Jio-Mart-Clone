@@ -101,3 +101,8 @@ body{
 #review{
     display: none;
 }
+
+#P_cart:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

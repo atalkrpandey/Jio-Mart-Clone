@@ -1,5 +1,5 @@
 
-  
+  // let cartItem = 0
    
   let ProductData = JSON.parse(localStorage.getItem('DATA'))
 
@@ -60,12 +60,13 @@ document.getElementById("Alogodiv").addEventListener("click",()=>{
 
 
   cartItemCount()
+  
 function cartItemCount(){
     
     let cartPlace = document.querySelector('#Aitemcount');
-    let cartItem = JSON.parse(localStorage.getItem('products'));
-    cartPlace.innerHTML = null
-    cartPlace.innerHTML = cartItem.length
+     let cartItem = JSON.parse(localStorage.getItem('products')) || [];
+     cartPlace.innerHTML = null
+     cartPlace.innerHTML = cartItem.length;
     
 }
  

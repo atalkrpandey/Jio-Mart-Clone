@@ -117,3 +117,7 @@ font-size: 15px;
     cursor: pointer;
    
 }
+
+.Ainner ul li a , .Ainner1 ul li a{
+    color: black !important;
+}

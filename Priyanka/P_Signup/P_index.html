@@ -19,7 +19,8 @@
 
 <body>
     <audio src="./signup_successful.mp3" id="signup_sucessful"></audio>
-    <div id="navigation" style="height:120px; position: sticky; top: 0;"></div>
+    <div id="navigation" style="height:120px; position: sticky; top: 0;">
+    </div>
     <div id="P_container">
         <div id="P_box1">
             <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
@@ -93,7 +94,13 @@
 </html>
 <script src="./P_index.js"></script>
 
-<script src="../P_ProductDetailsPage/navbar2.js" type="module"></script>
+<script  type="module">
+    import navigation from "../../components/navbar.js"
+    document.querySelector('#navigation').innerHTML = navigation()
+</script>
+
+
+
 <script type="module">
     import footer from "../P_ProductDetailsPage/footer.js"
         let footeContainer = document.querySelector('#sa-footer');

@@ -17,7 +17,7 @@ function navigation(){
   <div> 
       <input style="height:40px;border: none; outline: none;width: 365%;margin-left: 10%;" type="text" name="" id="Asearch" placeholder="Search essentails, grocceries and more...">
 
-      <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 22%;left: 71%;">
+      <button  id="Asearchbar"  style="background-color:#fff; position:absolute; z-index: 100;top: 20%;left: 69%;">
        
           <i id="Asearchlogo" style="font-size:16px;color: rgb(41, 37, 37);" class="fa-solid fa-list" >
           </i>
@@ -29,7 +29,8 @@ function navigation(){
       <span id="Ausername">
           
       </span>
-      <a id="Alogin" style="position:absolute; left:15%;top: 200%;" href="" >Sign in /</a><a id="Asignup" style="position:absolute; left:55%;top: 200%;" href=""> Sign up</a>
+      <a id="Alogin" style="position:absolute; left:15%;top: 200%;" href="../Priyanka/P_SignIn/P_index.html" >Sign in /</a>
+      <a id="Asignup" style="position:absolute; left:55%;top: 200%;" href="../Priyanka/P_Signup/P_index.html"> Sign up</a>
       </span>
   </div>
   <div id="Acartdiv"  style="position: absolute; left: 85%; display: flex;align-items: center;height: 8%; font-size: 17px;width: 7%; font-weight: 400;">
@@ -58,7 +59,7 @@ function navigation(){
       <div class="Ainner">
         <div class="Ainner1">
           <ul>
-            <li>Fruits & Vegetables</li>
+          <li><a href="../fruit.html">Fruits & Vegetables</a></li>
             <li>Dairy & Bakery</li>
             <li>Staples</li>
             <li>Snacks & Branded Food</li>
@@ -83,7 +84,7 @@ function navigation(){
       <div class="Ainner">
         <div class="Ainner1">
           <ul>
-            <li>Apples & Pears</li>
+          <li > <a href="../apples_pears.html">Apples & Pears</a> </li>
             <li>Avocado,Peach, Plum</li>
             <li>Banana, Melona & Coconut</li>
             <li>Cherries, Berries & Exotic Fruits</li>
@@ -144,8 +145,8 @@ function navigation(){
 
       <div class="Ainner1">
         <ul>
-          <li>Men</li>
-          <li>Women</li>
+        <li> <a href="../Men.html">Men</a> </li>
+        <li> <a href="../women.html">Women</a> </li>
           <li>Boys</li>
           <li>Girls</li>
           <li>Junior Boys</li>
@@ -245,3 +246,8 @@ function navigation(){
 }
 
 export default navigation;
+
+
+////////////////// NAV MENU ////////////////
+
+

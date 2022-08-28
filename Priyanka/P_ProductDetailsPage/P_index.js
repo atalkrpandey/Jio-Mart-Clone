@@ -1,10 +1,10 @@
-let data = {
-    "image": "https://www.jiomart.com/images/product/330x410/rvxfwfpfyt/aadi-men-s-black-synthetic-leather-daily-casual-slider-product-images-rvxfwfpfyt-0-202205312236.jpg",
-    "title": "Aadi Men's Black Synthetic Leather Daily Casual Slider",
-    "priceold": 999,
-    "pricenew": 229,
-}
-localStorage.setItem("product", JSON.stringify(data));
+// let data = {
+//     "image": "https://www.jiomart.com/images/product/330x410/rvxfwfpfyt/aadi-men-s-black-synthetic-leather-daily-casual-slider-product-images-rvxfwfpfyt-0-202205312236.jpg",
+//     "title": "Aadi Men's Black Synthetic Leather Daily Casual Slider",
+//     "priceold": 999,
+//     "pricenew": 229,
+// }
+// localStorage.setItem("products", JSON.stringify(data));
 // -------------------------------------------------------------------------//
 
 let products = JSON.parse(localStorage.getItem("product"));
@@ -83,16 +83,30 @@ let append = () => {
 }
 
 append();
-let ProductsArr=[];
+let ProductsArr = JSON.parse(localStorage.getItem('products')) || [];
 document.getElementById("P_cart").addEventListener("click", function(){
     ProductsArr.push(products);
-localStorage.setItem("products", JSON.stringify(ProductsArr));
+    localStorage.setItem("products", JSON.stringify(ProductsArr));
+
+   
+
+    cartItemCount()
+    function cartItemCount(){
+      
+      let cartPlace = document.querySelector('#Aitemcount');
+      let cartItem = JSON.parse(localStorage.getItem('products'));
+      cartPlace.innerHTML = null
+      cartPlace.innerHTML = cartItem.length;
+      console.log( cartItem.length) 
+  }
 // window.location.replace("#")
 });
 
 document.getElementById("P_buyNow").addEventListener("click", function(){
-    ProductsArr.push(products);
-localStorage.setItem("products", JSON.stringify(ProductsArr));
+     ProductsArr.push(products);
+     localStorage.setItem("products", JSON.stringify(ProductsArr));
+
+     window.location.href = "../../cart.html";
 // window.location.replace("#")
 })
 
@@ -202,3 +216,4 @@ function reviewFunc(){
 
    localStorage.setItem("review", JSON.stringify(feedback));
     }
+

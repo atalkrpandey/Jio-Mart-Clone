@@ -13,6 +13,8 @@
   <title>Buy Grocery Online at Best Prices Pan India</title>
     <link rel="stylesheet" href="./P_style.css">
     <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="../../satyajit/btmnavbar.css">
+    <link rel="stylesheet" href="../../satyajit/nav.css">
 </head>
 <body>
     
@@ -46,10 +48,19 @@
 </body>
 </html>
 <script src="./P_index.js"></script>
-<script src="../P_ProductDetailsPage/navbar2.js" type="module"></script>
+
+<script  type="module">
+    import navigation from "../../components/navbar.js"
+    document.querySelector('#navigation').innerHTML = navigation()
+</script>
+
+
 <script type="module">
     import footer from "../P_ProductDetailsPage/footer.js"
         let footeContainer = document.querySelector('#sa-footer');
         footeContainer.innerHTML = footer()
       
 </script>
+
+  <!-- <script src="../../satyajit/navbar.js"></script> -->
+<!-- <script src="../../satyajit/index.html"></script> -->

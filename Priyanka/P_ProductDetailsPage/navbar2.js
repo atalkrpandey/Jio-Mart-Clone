@@ -1,7 +1,10 @@
 import navigation from "../P_ProductDetailsPage/navbar1.js"
 let navbar = document.querySelector("#navigation").innerHTML = navigation();
-  console.log('heloooo')
 
+document.querySelector('#Acartdiv').addEventListener('click',() => {
+  window.location.href = "../../cart.html";
+ 
+})
  
 
 
