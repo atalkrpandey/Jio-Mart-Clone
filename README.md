@@ -3,7 +3,7 @@
 JioMart is an online supermarket for all the usual daily needs.
 The Project is a front-end clone of the jiomart.com itself. All the related further info along with source code is available.
 
-## Run Project : https://elaborate-mochi-0e0132.netlify.app/ 
+## Run Project : https://cheerful-duckanoo-8eb804.netlify.app 
 
 
 ## Team Members
