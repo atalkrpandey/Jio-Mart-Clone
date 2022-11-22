@@ -23,7 +23,7 @@ document.getElementById("circlrArrow").addEventListener("click", function(){
         document.getElementById("popup").style.display="block";
         document.getElementById("P_form").style.display="none";
         document.getElementById("login_successful").play();
-        window.location.href = "../../satyajit/index.html"
+        window.location.href = "../../index.html"
 
 
 
