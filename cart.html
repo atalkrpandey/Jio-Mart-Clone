@@ -640,7 +640,7 @@ ka_payment.innerHTML=null;
 
 
        let p4=document.createElement("p");
-       let disscount=el.priceold-el.pricenew
+       let disscount=el.priceold-el.pricenew || el.save_price;
 
 
        p4.innerText=`You Can Save ₹${disscount}`
